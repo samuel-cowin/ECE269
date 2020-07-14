@@ -46,6 +46,42 @@ To solve a system of linear equations, there are three methods in simplifying sy
 \end{itemize}
 Two matrices are said to be row equivalent if these operations can be used to equate one matrix to another. This translates into the two row equivalent matrices %
 having the same solution set. If in reduced form, there is a constradiction in the solution set, then the system of equations is inconsistent (no solution). 
+\newline
+\newline
+\subsection{Row Reduction and Echelon Forms}
+A rectangular matrix is in echelon form (or row echelon) if it has the following properties:
+\begin{itemize}
+    \item All nonzero rows are above any rows of all zeros
+    \item Each leading entry of a row is in a column to the right of the leading entry of the row above it
+    \item All entries in a column below a leading entry are zeros
+\end{itemize}
+\newline
+Additionally, the following properties yield a reduced row echelon form matrix:
+\begin{itemize}
+    \item The leading entry in each nonzero row is 1
+    \item Each leading 1 is the only nonzero entry in its column
+\end{itemize}
+\newline
+The terminology of echelon comes from the "steplike" appearance of the matrix entries. There are numerous possibilities for echelon form matricies, but %
+there is a unique reduced echelon form for a given matrix. RREF and REF refer to the reduced echelon forms. Pivot positions are those in the matrix that %
+correspond to the positions of leading 1's in the matrix rows. The forward phase of the process is to obtain echelon form while the backward phase is to %
+obtain reduced echelon form. Partial pivoting (selecting the pivot as the entry with the largest absolute value in a column) reduces rounding error by a %
+computer program.
+\newline
+\newline
+\noindent Below is a reduced echelon form matrix:
+$$
+\begin{bmatrix}
+    1 & 0 & -5 & 1\\
+    0 & 1 & 1 & 4\\
+    0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+\newline
+The solutions are obtained by translating the final column as the constants, while the preceding columns are the linear systems of equations through variables. %
+There are three variables in the above matrix due to there being four columns, and the first two variables are considered basic variables as they are explicitly %
+written in terms of the others. The solutions can be obtained from the reduced echelon form as the basic variables are all described in terms of constants and %
+the free variables. For the free variables, as the third one shown above, you can choose any value, and thus there are infinitely many distinct solutions to the set.
 
 \section{Supplementary Exercises}
 
