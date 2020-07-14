@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  14 JUL 2020 08:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  14 JUL 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -22,49 +22,103 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen135
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count175
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count176
+\leftroot@=\count177
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count178
+\DOTSCASE@=\count179
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count180
+\c@MaxMatrixCols=\count181
+\dotsspace@=\muskip16
+\c@parentequation=\count182
+\dspbrk@lvl=\count183
+\tag@help=\toks16
+\row@=\count184
+\column@=\count185
+\maxfields@=\count186
+\andhelp@=\toks17
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks18
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks20
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count175
-\Gm@cntv=\count176
-\c@Gm@tempcnt=\count177
-\Gm@bindingoffset=\dimen135
-\Gm@wd@mp=\dimen136
-\Gm@odd@mp=\dimen137
-\Gm@even@mp=\dimen138
-\Gm@layoutwidth=\dimen139
-\Gm@layoutheight=\dimen140
-\Gm@layouthoffset=\dimen141
-\Gm@layoutvoffset=\dimen142
-\Gm@dimlist=\toks16
+\Gm@cnth=\count187
+\Gm@cntv=\count188
+\c@Gm@tempcnt=\count189
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks21
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count178
-\l__pdf_internal_box=\box45
+\l__kernel_color_stack_int=\count190
+\l__pdf_internal_box=\box47
 ) (/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.aux)
 \openout1 = `ch1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -101,26 +155,37 @@ LaTeX Font Info:    ... okay on input line 4.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--41
+
+ []
+
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.aux) ) 
 Here is how much of TeX's memory you used:
- 913 strings out of 480608
- 14824 string characters out of 5903631
- 254462 words of memory out of 5000000
- 16867 multiletter control sequences out of 15000+600000
- 534761 words of font info for 32 fonts, out of 8000000 for 9000
+ 1554 strings out of 480608
+ 22125 string characters out of 5903631
+ 267635 words of memory out of 5000000
+ 17484 multiletter control sequences out of 15000+600000
+ 538631 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,6n,25p,304b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf" (1 page, 37397 bytes).
+ 30i,7n,25p,381b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf" (1 page, 79247 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
