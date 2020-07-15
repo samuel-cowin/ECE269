@@ -1,5 +1,7 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath}
+\usepackage{amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.17}
 \usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
 
 \begin{document}
@@ -55,13 +57,11 @@ A rectangular matrix is in echelon form (or row echelon) if it has the following
     \item Each leading entry of a row is in a column to the right of the leading entry of the row above it
     \item All entries in a column below a leading entry are zeros
 \end{itemize}
-\newline
 Additionally, the following properties yield a reduced row echelon form matrix:
 \begin{itemize}
     \item The leading entry in each nonzero row is 1
     \item Each leading 1 is the only nonzero entry in its column
 \end{itemize}
-\newline
 The terminology of echelon comes from the "steplike" appearance of the matrix entries. There are numerous possibilities for echelon form matricies, but %
 there is a unique reduced echelon form for a given matrix. RREF and REF refer to the reduced echelon forms. Pivot positions are those in the matrix that %
 correspond to the positions of leading 1's in the matrix rows. The forward phase of the process is to obtain echelon form while the backward phase is to %
@@ -82,7 +82,76 @@ The solutions are obtained by translating the final column as the constants, whi
 There are three variables in the above matrix due to there being four columns, and the first two variables are considered basic variables as they are explicitly %
 written in terms of the others. The solutions can be obtained from the reduced echelon form as the basic variables are all described in terms of constants and %
 the free variables. For the free variables, as the third one shown above, you can choose any value, and thus there are infinitely many distinct solutions to the set.
+\newline
+\newline
+\subsection{Vector Equations}
+A matrix with only one column is considered a column vector, or simplified to vector. Examples of these are included below and can include any real numbers. Vectors%
+ are ordered and thus the only equivalents are if they have the same components in each location.
+$$
+\textbf{w}=\begin{bmatrix}
+    \textit{w1}\\
+    \textit{w2}
+\end{bmatrix}
+$$
+\newline
+Example operations that can be executed on vectors include basic arithmetic operations per below. Careful consideration needs to be made to ensure the operations are being%
+done either elementwise or with matrix dimensionality being taken into consideration. Scalars can be multiplied with a vector to yield the scalar multiplied with each %
+element of the matrix.
+$$
+2*\begin{bmatrix}
+    2\\
+    1
+\end{bmatrix}+
+\begin{bmatrix}
+    3\\
+    2
+\end{bmatrix}.*
+\begin{bmatrix}
+    1\\
+    0.5
+\end{bmatrix}=
+\begin{bmatrix}
+    7\\
+    1
+\end{bmatrix}
+$$
+\newline
+\begin{figure}
+\centering
+\resizebox{\textwidth} {12cm} {   
+    \begin{tikzpicture}
+        \draw[thin,gray!40] (-10,10) grid (-10,10);
+        \draw[<->] (-10,0)--(10,0);
+        \draw[<->] (0,-10)--(0,10);
+        \draw[line width=2pt, blue, -stealth] (0,0)--(7,1);
+        \draw[line width=2pt, red, -stealth] (0,0)--(4,2);
+        \draw[line width=2pt, red, -stealth] (4,2)--(7,2);
+        \draw[line width=2pt, green, -stealth] (2,1)--(4,2);
+        \draw[line width=2pt, red, -stealth] (0,0)--(2,1);
+        \draw[line width=2pt, green, -stealth] (7,2)--(7,1);
+    \end{tikzpicture}
+    }
+\caption{Figure demonstrating plotting the result from vector operations above with red being the arithmetic operations, green being scaling, %
+and blue being the result.}
+\end{figure}
+\newline
+Vectors can be in other dimensionality spaces beyond 2D. 3D matrices are represented by a third row in the column vector, and n-dimension spaces %
+are represented by a column vector that is n-entries in length. There is a unique vector, the zero vector, whose entries are all 0 and is written %
+as \textbf{0}.
+\newline
+\newline
+The vector \textbf{y} below is defined as the linear combination of scalar values in c (called weights) and vectors \textbf{v}. 
 
+\begin{equation}
+    \boldsymbol{y} = c_1 \boldsymbol{v_1} + c_2 \boldsymbol{v_2} + \dots +c_n \boldsymbol{v_n}
+\end{equation}
+\newline
+A vector equation as shown above has the same solution set as the linear system whose augemnted matrix includes the variables \textbf{v} from above %
+with the last term of the augmented matrix being \textbf{y}. Specific interesting examples include the scalar multiple of a variable and the zero vector %
+which both can be shown with this format. the Span{\textbf{u}} is the line that includes all scalar multiples of that vector and \textbf{0}. The Span{\textbf{u,v}} %
+is the plane that incorporates all of the scalar multiples of those two vectors as well as \textbf{0}. This is possible since the scalar multiple could be with 0, %
+thus every possible value in that plane is achievable as a linear combination of the two vectors.  
+\newline
 \section{Supplementary Exercises}
 
 \end{document}
