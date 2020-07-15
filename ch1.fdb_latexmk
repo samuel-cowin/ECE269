@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1594835597 "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.tex" "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf" "ch1" 1594836189
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.aux" 1594835598 844 4bee6816d81aa97e99f72c095b81a14b ""
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.tex" 1594836188 7480 ace8ae19df16829e26db10d40b6bae5d ""
+["pdflatex"] 1594843794 "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.tex" "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf" "ch1" 1594843795
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.aux" 1594843794 850 24fd9c90f841f22e5bd696e6ce2c0f5f ""
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.tex" 1594843793 9292 1096b450f5b605fa16c03b34ab469e56 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -179,11 +179,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "ch1.aux" 1594835598 844 4bee6816d81aa97e99f72c095b81a14b "pdflatex"
-  "ch1.tex" 1594836188 7480 ace8ae19df16829e26db10d40b6bae5d ""
+  "ch1.aux" 1594843794 850 24fd9c90f841f22e5bd696e6ce2c0f5f "pdflatex"
+  "ch1.tex" 1594843793 9292 1096b450f5b605fa16c03b34ab469e56 ""
   (generated)
-  "ch1.aux"
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf"
-  "ch1.log"
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.log"
   "ch1.pdf"
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.pdf"
+  "ch1.aux"
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/ch1.log"
+  "ch1.log"

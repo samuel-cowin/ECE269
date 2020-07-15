@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath,bm}
+\usepackage{amsmath, bm}
 \usepackage{tikz,pgfplots}
 \pgfplotsset{compat=1.17}
 \usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
@@ -37,7 +37,7 @@ $$
 \newline
 This is an augmented matrix as the values the equations solve to are included as the right most column. The linear equations are represented%
  by the other columns in the matrix, starting with the second to right most column being constant coefficients. From there, the degree of the variables%
- increases by one per column. An \textbf{m x n} matrix indicates m rows and n columns. 
+ increases by one per column. An \textit{m x n} matrix indicates m rows and n columns. 
 \newline
 \newline
 To solve a system of linear equations, there are three methods in simplifying system:
@@ -152,6 +152,52 @@ which both can be shown with this format. the Span{\textbf{u}} is the line that 
 is the plane that incorporates all of the scalar multiples of those two vectors as well as \textbf{0}. This is possible since the scalar multiple could be with 0, %
 thus every possible value in that plane is achievable as a linear combination of the two vectors.  
 \newline
-\section{Supplementary Exercises}
+\subsection{The Matrix Equation Ax=b}
+If \textbf{A} is an \textit{m x n} matrix, with columns $\begin{bmatrix}
+    \mathbf{a_1} & \mathbf{a_2} & \mathbf{\dots} & \mathbf{a_n}
+\end{bmatrix}$ %
+and \textbf{x} is a weight column vector, then the product of \textbf{A} and \textbf{x} is the linear combination of the components of %
+\textbf{A} with \textbf{x} as the weights for the components. Below shows this equation.
+$$
+    \boldsymbol{Ax} = 
+    \begin{bmatrix}
+        \mathbf{a_1} & \mathbf{a_2} & \mathbf{\dots} & \mathbf{a_n}
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        \dots\\
+        x_n
+    \end{bmatrix} = x_1\mathbf{a_1} + x_2\mathbf{a_2} + \mathbf{\dots} + x_n\mathbf{a_n}
+$$
+\newline
+The dimensionality of \textbf{x} needs to match the number of columns present in \textbf{A} for the operation to make sense. Any equation can be written in this format %
+by taking the coefficients as the weight vector, and the variables as the \textit{m x n} matrix to which the scalar coefficients are applied. The equation \textbf{Ax=b} %
+has a solution if and only if \textbf{b} is a linear combination of the columns of \textbf{A}.
+\newline
+\newline
+The identity matrix and dot product are showcased below.
+$$
+\begin{bmatrix}
+    1 & 0 & 1\\
+    0 & 1 & 0\\
+    0 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+    x_1\\
+    x_2\\
+    x_3
+\end{bmatrix} = \begin{bmatrix}
+    1\cdot x_1 + 0\cdot x_2 + 0\cdot x_3\\
+    0\cdot x_1 + 1\cdot x_2 + 0\cdot x_3\\
+    0\cdot x_1 + 0\cdot x_2 + 1\cdot x_3
+\end{bmatrix} = \begin{bmatrix}
+    x_1\\
+    x_2\\
+    x_3
+\end{bmatrix}
+$$
+\newline
+Depedning on the programming language you may want to modify the method of multiplication to increase speed. An example being that C stores matrices as rows and you would %
+need to modify the program to interpret the data in this manner. 
 
 \end{document}
