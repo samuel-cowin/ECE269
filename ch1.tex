@@ -207,11 +207,22 @@ the equation has at least one free variable per the reduced echelon form describ
 \newline
 A linear equation written plainly can be referred to as an implicit defnition of a plane given there are two or more free variables. Solving the equation to yield the vectors %
 descirbing the solution of the equation is an explicit defnition of the plane spanned by these vectors. Another name for the explicit definition is the parametric vector%
- equation. A solution written in parametric vector notation is as shown below.
+ equation. A solution written in parametric vector notation for a homogeneous solution is as shown below.
 \begin{equation}
      \mathbf{x} = s\mathbf{u}+t\mathbf{v}
 \end{equation}
 When only one vector needs to be utilized in parametric vector form, the solution can be described by a line. 
 \newline
 \newline
+The above equation is modified as below when you solve a nonhomogenous equation.
+\begin{equation}
+    \mathbf{x} = \mathbf{p} + \mathbf{v_h}
+\end{equation}
+\newline
+The vector $\mathbf{v_h}$ is the solution to the homogenous equation as described previously, while the vector \textbf{p} is the solution to the nonhomogenous equation when %
+the scalar multipliers in the homogeneous solution are zero. Adding \textbf{p} to the solution can be thought of as a translation. This will move the vector of the homogenous %
+soltion in the direction parallel to the vector from \textbf{0} to \textbf{p}. This holds true for a solution set described by a line, as in the scalar multiple of the %
+solution sets we have seen previously. Stated explicitly, the solution set of \textbf{Ax=b} is a line through \textbf{p} parallel to the solution set of \textbf{Ax=0} - %
+generalizable to any consistent soltuon set with any number of free variables.
+
 \end{document}
