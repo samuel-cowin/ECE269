@@ -239,5 +239,38 @@ linearly dependent if at least one of the vectors is a multiple of the other. Th
 vectors is linearly dependent if and only if at least one of the vectors in S is a linear combination of the others. If a set is dependent, and the initial vector in the set %
 is not the zero vector, then one of the other vectors is a linear combination of the terms before it. Another important theorem is that if the number of terms in a set is %
 greater than the dimensionality of the set, then the set is linearly dependent. Lastly, if a set contains the zero vector, then it is linearly dependent. 
+\newline
+\subsection{Introduction to Linear Transformations}
+A useful interpretation of the matrix equation previously defined is that \textbf{A} is a transformation applied to \textbf{x} to acheive \textbf{b}. What this transformation %
+does is take the domain of \textbf{x} and \textbf{x} itself, and assigns a vector \textbf{T(x)} (\textbf{Ax}) to each vector \textbf{x} in the new domain (codomain) %
+with added dimensionality.%
+This is often referred to as the image of \textbf{x} under the action \textbf{T}. The set of all the new vectors is referred to as the range. The domain is of dimensionality n %
+corresponding to the number of columns of A, while the codomain is of dimensionality m corresponding to the number of entries per column in A. 
+\newline
+\newline
+Projections from the 3D to the 2D world are straighforward, as all you need to do is apply an identity matrix that has the dimensions you are no longer interested in replaced %
+with zeros. Shear transformations can be achieved by taking the identity matrix and adding constants in the row of the dimension you wish to translate. Contractions can occur %
+when the transformation matrix is between 0 and 1, while dilations occur when the tranformation is greater than 1. Rotations can be made by applying constants opposite %
+where the identity matrix would be. 
+\newline
+\subsection{The matrix of a linear transformation}
+Every linear transformation between two dimensions is a matrix transformation that can be completely realized when using the identity matrix to determine the attributes of the %
+transformations. If it is a linear transformation, then there exists a unique matrix such that the trasformation of \textbf{x} is realized by multiplying \textbf{x} by this %
+matrix. This matrix is described as below using $\mathbf{e_j}$ to describe the corresponding jth identity matrix column. 
+\begin{equation}
+    A = T(e) = \begin{bmatrix}
+        T(e_1) & T(e_2) & \dots & T(e_j)
+    \end{bmatrix}
+\end{equation}
+Rotations can be understood by how they are interpretted on a graph. Rotation counterclockwise would then take each portion of the identity matrix and translate these into the %
+corresponding trigonemtric variations. Starting with Page 74 in the textbook, there are numerous examples of linear transformations and the corresponding matrices that will %
+yield those results. Mapping from the domain into the codomain requires that b in the codomain is the image of at least one x in the domain (existence). A mapping is one-to-one %
+if there is at most one x (or none) where b is the image of it (uniqueness). Furthermore, the linear transformation is one-to-one if and only if the only solution is the %
+trivial one or the columns are linearly independent. The linear transformation maps from one dimensionality to another if and only if the columns of it span the %
+dimensionality of the new space. This explains why mapping from 3D to 2D is not a true "map" since there are not enough pivot positions remaining to have a consistent matrix. 
+\newline
+\newline
+\subsection{Linear Models in Business, Science, and Engineering}
+Discussed applications of linear models to various fields and showing the utility of the material. 
 
 \end{document}
