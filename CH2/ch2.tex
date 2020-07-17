@@ -1,10 +1,14 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath, bm}
+\usepackage{amsmath, bm, lipsum}
 \usepackage{tikz, pgfplots}
 \pgfplotsset{compat=1.17}
 \usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
 
 \begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
     
 \title{Notes for ECE269 - Linear Algebra \\
 \large Chapter 2}
@@ -13,7 +17,70 @@
 
 \section{Linear Equations in Linear Algebra}
 \section{Matrix Algebra}
+This section will outline the foundations of matrix operations that are used throughout many linear algebra applications. These include inversion, handlind multiple matrices %
+, and partitioning matrices. These concepts will be shown through numerous examples demonstrating the utility.
 
-
+\subsection{Matrix Operations}
+If \textbf{A} is an \textit{m x n} matrix with m rows and n columns, then the scalar entry in the ith row and the jth column is denoted with $a_ij$. %
+This denotion refers to beginning in the top left, being the ith entry down and the jth column vector. The main diagonol is formed when the i and j %
+enumerations are equal. A diagonol matrix is a square matrix with the nondiagonol entries equating to zero. 
+\newline
+\newline
+The sum of two matrices is only defined when they are the same size, as matrix addition is an extension of vector addition in that it is an item by item operation. %
+Multiplying a matrix by a scalar is similar to vectors as well, in that each item in the matrix is multiplied by the scalar. Equality of theorems extending from this %
+are proven by showing matrices on each side of the equation are of the same size and that their column vectors are equal. If \textbf{A} is an \textit{m x n} matrix and %
+\textbf{B} is a \textit{n x p} matrix then the product of \textbf{AB} is an \textit{m x p} matrix as shown below:
+\newline
+$$
+\mathbf{AB} = A\begin{bmatrix}
+    \mathbf{b_1} & \mathbf{b_2} & \mathbf{\dots} & \mathbf{b_p}
+\end{bmatrix}
+$$
+\newline
+This multiplication of matrices corresponds to a composition of linear transformations. Alternatively, each column of \textbf{B} is used as a weight vector dot producted%
+ to each column of \textbf{A}. For this reason the number of columns in \textbf{A} must match the rows in \textbf{B} or the dot product is not defined. The number of %
+rows is maintained from \textbf{A} and the number of columns is maintained from \textbf{B}. This can be seen in Figure 1. 
+\newline
+\begin{figure}
+\begin{align*}
+    \overset{A}{\underset{\textcolor{blue}{3 x 5}}{
+        \begin{array}{@{}c@{}}{
+            \begin{bmatrix}
+                * & * & * & * & * \\
+                * & * & * & * & * \\
+                * & * & * & * & * 
+            \end{bmatrix}} \\ \\ \\
+        \end{array}
+    }}
+    \overset{B}{\underset{\textcolor{blue}{5 x 2}}{
+    \begin{bmatrix}
+        * & * \\
+        * & * \\
+        * & * \\
+        * & * \\
+        * & *
+    \end{bmatrix}}}
+    \begin{array}{@{}c@{}}{
+        =
+    } \\ \\ \\  
+    \end{array}
+    \overset{AB}{\underset{\textcolor{blue}{3 x 2}}{
+        \begin{array}{@{}c@{}}{
+            \begin{bmatrix}
+                * & * \\ 
+                * & * \\ 
+                * & * 
+            \end{bmatrix}} \\ \\ \\
+        \end{array}
+    }}
+\end{align*}
+\caption{Equations showing the necessary dimensionality for proper matrix multiplication.}
+\end{figure}
+The entries in the final matrix, per row/column pair, correspond to the dot product of that row from the first matrix and the column from the second matrix. %
+If AB = BA, then we state that these matrices commute with one another. Cancellation laws do not work for matrices (i.e. AB=AC does not mean B=C). % 
+The product of A and B being the zero matrix does not mean that either is the zero matrix itself. The kth exponent of a matrix only translates to the multiple of that matrix %
+k times for an \textit{n x n} matrix. Raising a matrix to the power of zero yields the identity matrix. The transpose of a matrix that is \textit{m x n} yields % 
+a \textit{n x m} matrix whose columns are formed by the initial matrix's rows. The transpose of a product of matrices is equal to the product of their transposes %
+in the reverse order. 
 
 \end{document}
