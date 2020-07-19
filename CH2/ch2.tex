@@ -222,10 +222,22 @@ A=\begin{bmatrix}
 \end{bmatrix}
 $$
 \newline
+\newline
+\newline
 By formulating the original matrix A in this way, this allows consecutive, simpler operations to carry out in order to solve the overall system. This is due to %
 being able to write $\mathbf{Ax=L(Ux)=b}$ and substituting y for Ux. This facterization improves the efficiency on solving the initial problem by reducing the number %
 necessary operations given that you know L and U. (Side note. Row reduction to solve an equation \textit{is} inversion). To form the LU facterization, reduce A to %
 an echelon form U by sequence of row replacements, if possible, then place entries in L so the same operations reduce L to the identity matrix. Another way of stating %
 this, as you reduce A to U or the echelon form, take the columns of the matrix being reduced and enter then into L and divide the column by the pivot. 
+\subsection{The Leontief Input-Output Model}
+Applications of topics in Chapter 2 are applied to economics and show an addiitonal way of computing the inverse of the identity matrix minus the consumption matrix %
+for when consumption is below the input needed to produce. The inverse is analagous to the series of increasing power consumption matrices until infinity. These %
+entries are important as they highlight what will have to change in production to meet changing demands. 
+\subsection{Applications for Computer Graphics}
+Scaling, shears, and other linear transformations are easily interpretable with standard coordinate systems through matrix multiplication. In order to properly understand %
+translations, a new coordinate system, homogoeneous coordinates, is useful. For homogoeneous coordinates, you add a 1 in the third dimension for the x-y variables and %
+add scalars to the third column of the transformation matrix in order to implement %
+translations in the 3D realm. This is the equivalent of putting those 2D coordinates one space up in the 3D space. These coordinates are no longer useful for addition or %
+multiplication with scalars. Linear transformations are written in homogoeneous coordinates by appending the identity matrix to the 2D transformation matrix A. %
 
 \end{document}

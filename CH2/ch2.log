@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  19 JUL 2020 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  19 JUL 2020 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,7 +570,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--211
 
  []
 
-[4] [5] (/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH2/ch2.aux) ) 
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 223--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--232
+
+ []
+
+[5] (/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH2/ch2.aux) ) 
 Here is how much of TeX's memory you used:
  23007 strings out of 480608
  592674 string characters out of 5903631
@@ -580,7 +590,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  74i,29n,127p,807b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH2/ch2.pdf" (5 pages, 129029 bytes).
+Output written on "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH2/ch2.pdf" (5 pages, 131049 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
