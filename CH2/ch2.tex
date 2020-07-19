@@ -239,5 +239,22 @@ translations, a new coordinate system, homogoeneous coordinates, is useful. For 
 add scalars to the third column of the transformation matrix in order to implement %
 translations in the 3D realm. This is the equivalent of putting those 2D coordinates one space up in the 3D space. These coordinates are no longer useful for addition or %
 multiplication with scalars. Linear transformations are written in homogoeneous coordinates by appending the identity matrix to the 2D transformation matrix A. %
-
+\subsection{Subspaces}
+A subspace H within a region has the following properties:
+\begin{itemize}
+    \item The zero vector is in H
+    \item For each \textbf{u} and \textbf{v} in H, the sum is also in H
+    \item For each \textbf{u} in H and each scalar, that scalar multiple of \textbf{u} is in H
+\end{itemize}
+Lines or planes can be subspaces as well as the zero vector which is also a subspace. The column space of a matrix can be determined if the column in question when reduced %
+with the matrix has a solution. Column space is the same as span, and thus the column space is in the subspace. The null space is the set of solutions of the homogenous %
+equation \textbf{Ax=0}. The null space is also a subspace. A basis of a subspace is a linearly independent set in H that also spans H. The obvious example of basis is the %
+standard basis which is the identity matrix. The basis for the null space (homogoeneous) is the vector form of the solution for the reduced echelon form of the equation. %
+Similarly, the vector form of the Col space can be reduced to the basis by writing in the vector form the reduced echelon solution and substituting the free variables %
+for the linear combination of the pivot columns. The pivot columns have to be linearly independent since they stem from the idetity matrix. 
+\subsection{Dimension and Rank}
+The basis completely determines the dimensions needed to express the values in H. The dimension of a nonzero subspace is the number of vectors needed to describe the space, %
+or the number of vectors needed in the basis. A plane through the zero vector can be described in 2D and a line similar in 1D. A rank is the dimensionality of the column %
+space or specifically the number of pivots in the column space. The rank of a matrix and the dimensionality of the Nul (homogoeneous solution set) of that matrix is %
+equal to the number of columns. Errors in computer storage of numbers can lead to differing answers for the rank, etc. and are often avoided in practice. 
 \end{document}
