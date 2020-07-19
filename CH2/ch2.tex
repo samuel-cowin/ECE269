@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{amsmath, bm, lipsum}
+\usepackage{amsmath, bm, amssymb}
 \usepackage{tikz, pgfplots}
 \pgfplotsset{compat=1.17}
 \usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
@@ -191,12 +191,41 @@ $$
 AB=\begin{bmatrix}
     col_1(A) & col_2(A) & \dots & col_n(A)
 \end{bmatrix} \begin{bmatrix}
-    [row_1(B) \\ row_2(B) \\ \vdots \\ row_3(B)] \\ 
-\end{bmatrix}\\=col_1(A)row_1(B) + \dots + col_n(A)row_n(B)
+    [row_1(B) \\ row_2(B) \\ \vdots \\ row_3(B)]     
+\end{bmatrix}=
+$$
+\newline
+$$
+col_1(A)row_1(B) + \dots + col_n(A)row_n(B)
 $$
 \newline
 Invertible matrices can be found for block partitions by again realizing that the original partitioned matrix and the inverse need to equate to the identity matrix. %
 Block diagonol matrices are invertible if each block on the diagonol is invertible as there are zero entries for the other blocks. 
 \subsection{Matrix Facterizations}
+Matrix facterization is opposite to matrix multiplication in the sense that multiplication was a synthesis of the information contained in the matrices while %
+facterization recomposes the information in the matrices into more than one matrix. This is often completed in a preprocessing step - taking the information %
+provided and putting it into an alternative format in order to make manipulating and understanding the information easier. One example of this is through %
+\textbf{LU} Facterization shown below with the first matrix being the L (\textit{m x m} unit lower triangular matrix) and the right being U (\textit{m x n} echelon %
+form of A). %
+\newline
+$$
+A=\begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    * & 1 & 0 & 0 \\
+    * & * & 1 & 0 \\
+    * & * & * & 1
+\end{bmatrix}\begin{bmatrix}
+    \scriptstyle \blacksquare & * & * & * & * \\
+    0 & \scriptstyle \blacksquare & * & * & * \\
+    0 & 0 & 0 & \scriptstyle \blacksquare & * \\
+    0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+$$
+\newline
+By formulating the original matrix A in this way, this allows consecutive, simpler operations to carry out in order to solve the overall system. This is due to %
+being able to write $\mathbf{Ax=L(Ux)=b}$ and substituting y for Ux. This facterization improves the efficiency on solving the initial problem by reducing the number %
+necessary operations given that you know L and U. (Side note. Row reduction to solve an equation \textit{is} inversion). To form the LU facterization, reduce A to %
+an echelon form U by sequence of row replacements, if possible, then place entries in L so the same operations reduce L to the identity matrix. Another way of stating %
+this, as you reduce A to U or the echelon form, take the columns of the matrix being reduced and enter then into L and divide the column by the pivot. 
 
 \end{document}
