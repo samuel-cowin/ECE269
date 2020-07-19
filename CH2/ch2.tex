@@ -155,6 +155,48 @@ are true or they are all false. The statements range from proving independence o
 is only invertible if the standard matrix demonstrating this transformation is an invertible matrix, and if this is the case, there exists an inverse transformation %
 that when applied to the original linear transformation yields the vector the transformations are applied to. The converse of the existence of a solution in the Invertible %
 Matrix theorem is not that there isn't a solution for any b, just that the matrix is inconsistent for at least b. 
-
+\subsection{Partitioned Matrices}
+An extension of the previously used column interpretation of the matrices evaluated is partitioning matrices. The value here, is that implementing more specific horizontal %
+and vertical divisions yields new ways to interpret matrices that are more relevant for a given application. An example can be seen below.
+\newline
+\newline
+$$
+A=\left[\begin{array}{c c c | c c | c}
+    3 & 0 & -1 & 5 & 9 & -2 \\
+    -5 & 2 & 4 & 0  & -3 & 1 \\
+    \hline
+    -8 & -6 & 3 & 1 & 7 & -4
+\end{array}\right]=
+\begin{bmatrix}
+    \mathbf{A_11} & \mathbf{A_12} & \mathbf{A_13} \\
+    \mathbf{A_21} & \mathbf{A_22} & \mathbf{A_23}
+\end{bmatrix}
+$$
+\newline
+\newline
+One example where this notation can make sense is with a circuit board. The matrix diagonol (the entry concerned with itself) could refer to the actual IC's, while the %
+other entries correspond to the relationships of the IC's to one another. Arithmetic operations between matrices with equivalent partitions are done on a block by block %
+basis. This is useful for when you want to modify only a portion of the matrices and not the entire thing for computational speed. The operations can be done on the blocks %
+and the original matrix can be modified based on these block designations. One thing to keep in mind, for matrix multiplication, and not element by element multiplication, %
+The row parititons of the first matrix will need to match the column partitions of the second matrix. To be comformable for block multiplication, it is not enough to have %
+the same block count. The individual blocks need to maintain the same number of components for the multiplication to make sense. Keeping in mind that matrix multiplication %
+is not communative, extra attention needs to be made to interpret the row/column blocks correctly. The columns need to match the rows of the next matrix. When a transpose %
+is applied to the matrix, this transpose is applied to all of the blocks within the matrix as well. %
+Below is the column-row expansion of matrix multiplication.
+\newline
+\newline
+\newline
+If A is \textit{m x n} and B is \textit{n x p}, then 
+$$
+AB=\begin{bmatrix}
+    col_1(A) & col_2(A) & \dots & col_n(A)
+\end{bmatrix} \begin{bmatrix}
+    [row_1(B) \\ row_2(B) \\ \vdots \\ row_3(B)] \\ 
+\end{bmatrix}\\=col_1(A)row_1(B) + \dots + col_n(A)row_n(B)
+$$
+\newline
+Invertible matrices can be found for block partitions by again realizing that the original partitioned matrix and the inverse need to equate to the identity matrix. %
+Block diagonol matrices are invertible if each block on the diagonol is invertible as there are zero entries for the other blocks. 
+\subsection{Matrix Facterizations}
 
 \end{document}
