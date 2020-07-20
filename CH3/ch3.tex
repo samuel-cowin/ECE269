@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 3}
+\author{Sam Cowin}
+\maketitle
+
+\section{Determinants}
+Although many of the applications determinants were once used for are no longer applicable, they play a key role in many applications still. This chapter outlines %
+relevant applications and derives extensions and ideas about determinants. 
+\subsection{Introduction to Determinants}
+The determinant stems from the row reduction algorithm applied to a \textit{n x n} matrix. This algorithm applied to an "invertible" matrix requires there %
+being pivot positions in each column. Due to this, as row reduction is applied, the determinant forms from the linear combination or row operations in the bottom right %
+of the matrix. 
+\newline
+\newline
+For simplicity, the determinant of a 3D matrix is shown here before the general case: 
+\newline
+$$
+\Delta=a_{11}\cdot detA_{11}-a_{12}\cdot detA_{12}+a_{13}\cdot detA_{13}
+$$
+\newline
+In this case, the subscripts of the matrices refer to the row/column pair to be deleted when taken into the equation. This can be extended generally for n>2 %
+by alternating the determinant being added to the equation and utilizing N-1 determinants where N is the dimensionality of the matrix you are seeking the determinant. %
+\newline
+$$
+detA=a_{11}\cdot detA_{11}-a_{12}\cdot detA_{12}+\dots+(-1)^{1+n}a_{1n}\cdot detA_{1n}
+$$
+\newline
+This method of the determinant is also the cofactor expansion across the first row of the matrix. The cofactor expansion across any row and any column can be used to %
+determine the determinant of the matrix. If the matrix is triangular, then the determinant is the product of the main entries down the diagonol of the matrix. 
+\subsection{Properties of Determinants}
+
+
+\end{document}
