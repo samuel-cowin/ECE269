@@ -40,6 +40,25 @@ $$
 This method of the determinant is also the cofactor expansion across the first row of the matrix. The cofactor expansion across any row and any column can be used to %
 determine the determinant of the matrix. If the matrix is triangular, then the determinant is the product of the main entries down the diagonol of the matrix. 
 \subsection{Properties of Determinants}
-
+If row operations are applied to a matrix, the determinant changes in the following ways:
+\newline
+\newline
+\newline
+\newline
+Assuming there is a square matrix.
+\begin{itemize}
+    \item If a multiple of one row of A is added to another row to form a matrix B, the determinant does not change. 
+    \item If two rows are interchanged to produce a new matrix B, then the determinant is the inverse of the determinant of A.
+    \item If one row of A is multiplied by k to produce a new row in B, then the determinant of B is the determinant of A scaled by k.
+\end{itemize}
+Note - just adding one row to another does not change the determinant either. Factoring out a multiple of a row means that this factor needs to be included %
+back into the final result. When the matrix is invertible, the determinant is the product of pivot positions multiplied with the number or row interchanges times -1
+for a echelon form matrix. This further proves that a matrix is invertible only if the determinant is zero, since the product of the pivot positions would %
+yield zero when the matrix is not invertible. Linear dependence is obvious when two columns or rows are the same or there is a zero column or row. Cofactor %
+expansion, row reduction to triangular matrices, and using the above theorems speeds up the operations to find a determinant. For a square matrix, the determinant %
+of the transpose is equal to the determinant of the original matrix which yields the result that the row and column terms are interchangeable in the above theorem. %
+Determinants also have multiplicative properties in that the determinant of the product of two matrices is the product of the individual determinants, while this %
+does not hold true for the addition of the determinants
+\subsection{Cramer's Rule, Volume, and Linear Transformations}
 
 \end{document}
