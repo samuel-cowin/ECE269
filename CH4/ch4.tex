@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 4}
+\author{Sam Cowin}
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+\section{Matrix Algebra}
+\section{Determinants}
+\section{Vector Spaces}
+The point of this chapter is to tie in theory from the initial chapters in order to demonstrate the utlity in input/output systems being understood as vector spaces. %
+Through geometry and linear algebra, many concepts can be understood from the foundations of the first few chapters. 
+\subsection{Vector Spaces and Subspaces}
+A vector space is a nonempty set \textit{V} of objects, called vectors, on which are defined two operations, called addition and multiplication by scalars (real numbers), %
+subject to the ten axioms on page 192 of the textbook, which must hold for vectors \textbf{u, v, and w} in \textit{V} and for all scalars \textit{c and d}. The paralellogram %
+rule from the earlier chapters is useful here to prove the axioms for generic vectors within any space. Doubly infinite sequences of numbers are equivalnt to discrete time %
+measured signals that are common within the field of engineering and especially for signal processing. In the same way that discrete time signals can be understood as %
+vector spaces, so can polynomials of degree n as well as functions and their compositions. 
+\newline
+\newline
+A subspace of V, H, has the following three properties from the axiom list mentioned previously:
+\begin{itemize}
+    \item The zero vector of V is in H
+    \item H is closed under vector adition. That is, for each \textbf{u and v}, in H, the sum \textbf{u+v} is in H. 
+    \item H is closed under multiplication by scalars. That is, for each \textbf{u} in H and each scalar c, the vector multiple \textbf{u}c is in H. 
+\end{itemize} 
+The zero subspace is a unique identification denoted {\textbf{0}}. 2D is not a subspace of 3D as it is not even a subset. There needs to be equal dimensionality. A vector %
+acting like 2D that is in fact a subspace of 3D, is the 2D vector with a third dimension that is 0. Sets need to be through the origin in order to be a subspace. Every %
+subspace for the 3D set is either a plane through the origin or a line through the origin except for the set itself. Is a group of vectors is in the vector space V, then %
+the span of those vectors is also in the subspace of V. Rewriting a set as the vector equation can demonstrate the dimensionality for which that set is a subspace. %
+\subsection{Null Spaces, Column Spaces, and Linear Transformations}
+The null space of a matrix is the set of all solutions for the homogeneous equation. Another way to visualize this is the set of all solutions that are mapped into the %
+zero vector through the linear transformation  matrix A. The null space of a matrix for a certain dimension set is the subspace of that set. For the null space to be %
+a subspace, it must include the zero vector, which is why it is important that the equations are homogeneous. For review, the spanning set of the null space for a matrix %
+is found by row reducing the matrix to solve for the free variables. The not free variables are explicitly described with these other variables, and a vector equation is %
+written with the free variables as the vectors and the dimensionality described by the number of columns of the original matrix. This is implicitly linearly independent. %
+A column space is a subspace for the dimensionality of the rows of the matrix for which the column space is defined. Unless the matrix under question is square, the null %
+space and the column space are recognized for different dimensions. Any column of the matrix is in the column space, and to find a vector for the null space all you need to %
+do is row reduce and solve, substituting for the free variables. A table outlining the differences between Nul and Col is on page 206 in the text to be modified later. %
+\newline
+\newline
+The kernal of a linear transformation T is the set of all \textbf{u} in V (vector space) such that T\textbf{(u)=0}. The range of T is the set of all vectors in W 
+(vector space) of the form T(\textbf{x}) for some x in V. If this T is a matrix transformation, then the null space and column space from before apply. Derivatives are linear
+transformations as they can be proven to hold the attributes of linear transformations from chapter 2. Differential equations are just the kernal or the range for the 
+particular equation. 
+
+
+    
+\end{document}
