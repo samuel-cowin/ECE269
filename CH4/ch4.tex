@@ -102,5 +102,12 @@ vectors. Only Col A utilizes the original matrix in describing its domain. Row o
  \newline
  The rank of A is the dimension of the column space of A. The rank of A plus the dimension of the Nul of A is equal to the number of columns 
  in the matrix of A. 
+ \subsection{Change of Basis}
+ The matrix that converts one basis into another basis is that which describes the basis changing in terms of the vectors in the new basis. 
+ This is multiplied with the original vector in the basis we are modifying. The matrix multiplication from one basis into another
+ is invertible to go back to the original basis. In order to change basis to the standard basis, we can utilize the previois change of 
+ coordinates matrix, but for nonstandard bases, we need this new theorem. To find the change of coordinates matrix from, say, beta to chi, 
+ you apply the linear transformation onto beta. In this way the matrices are alligned with the new basis first, then the old. From there, 
+ row reduction yields the change of coordinates. 
     
 \end{document}
