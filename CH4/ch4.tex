@@ -54,7 +54,23 @@ The kernal of a linear transformation T is the set of all \textbf{u} in V (vecto
 (vector space) of the form T(\textbf{x}) for some x in V. If this T is a matrix transformation, then the null space and column space from before apply. Derivatives are linear
 transformations as they can be proven to hold the attributes of linear transformations from chapter 2. Differential equations are just the kernal or the range for the 
 particular equation. 
-
+\subsection{Linearly Independent Sets; Bases}
+To restate, linear indepedence is when the linear combination of vectors with scalars is the zero vector only with the trivial 
+solution of every scalar being zero. Any set containing the zero vector is linearly dependent as well as any set of multiple 
+vectors where the vectors are linear combinations of multiples of each other. The basis in V for H has the following properties:
+\begin{itemize}
+    \item $\beta$ is a linearly independent set
+    \item the subspace spanned by $\beta$ coincides with H or H is a span of the components of $\beta$ 
+\end{itemize}
+The columns of invertible matrices have to be linearly independent and thus for the basis for the dimensionality they describe. The identity 
+matrix is a specific form of this in that it is called the standard basis for the dimensionality it describes. Increasing power polynomial 
+sets are only equal to zero when the zero polynomial is introduced and thus are a basis for that dimensionality. If a set describes the 
+vectors for which the span describes H, H is still described by this set if there is a linear combination of vectors that describe another 
+vector in the set - and this vector is then removed. As long as H is not the zero vector, then this new set can form a basis for H. 
+Discarding the free variables from a reduced echelon form matrix yields the basis for the matrix. In other words, the pivot columns of 
+a matrix form the basis for the column space. The pivot columns of the reduced matrix do not form the basis, however, of the original
+matrix. The pivot columns will need to be applied to the original matrix in order to find its basis. 
+\subsection{Coordinate Systems}
 
     
 \end{document}
