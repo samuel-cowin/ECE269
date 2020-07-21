@@ -91,5 +91,16 @@ If H is a subspace of a finite-dimensional vector space V, any linearly independ
 dimensional. Any linearly indepedent set of p elements, corresponding to the dimensionality of the vector space greater than 1, is a basis 
 for that space. Alternatively, any set of p elements spanning the vector space is also a basis. The dimension of Nul A is the number of free 
 variables in the matrix equation and the dimension of Col A is the number of pivot columns. 
+\subsection{Rank}
+If two matrices A and B are row equivalent, then their row spaces are the same. If B is in echelon form, the nonzero rows of B form a basis
+ for the row space of A as well as for B. The basis for Row A are found from the echelon form of A and taking the nonzero rows. The basis 
+for Col A is from finding the pivots and then utilizing the original matrix A. The basis for the Nul A is found by taking the reduced 
+echelon form and solving the homogeneous equations for the free variables and using the vector equation with the free variables as the 
+vectors. Only Col A utilizes the original matrix in describing its domain. Row operations change row interdependence and thus the reduced
+ matrix does not have the same row dependence. 
+ \newline
+ \newline
+ The rank of A is the dimension of the column space of A. The rank of A plus the dimension of the Nul of A is equal to the number of columns 
+ in the matrix of A. 
     
 \end{document}
