@@ -109,5 +109,15 @@ vectors. Only Col A utilizes the original matrix in describing its domain. Row o
  coordinates matrix, but for nonstandard bases, we need this new theorem. To find the change of coordinates matrix from, say, beta to chi, 
  you apply the linear transformation onto beta. In this way the matrices are alligned with the new basis first, then the old. From there, 
  row reduction yields the change of coordinates. 
+ \subsection{Applications to Difference Equations}
+ Difference equations pop up in many useful applications. Temporal difference equations in many machine learning application, digital 
+ filtering uses linear difference equations, and many others. For filtering, the difference equation you are finding is a linear combination
+ of terms that will cancel out the input sequence (solving a homogeneous equation). The homogeneous difference equation can be rewritten as the 
+ auxilliary equation which replaces the linear variable with an exponenet to the same power. If the signal satisfies this equation as a root, it 
+ is a solution for the homogeneous equation. For nonhomogeneous equations, the solution set is a linear combination of the homogeneous solutions
+ and the unique solutions to the nonhomogeneous equation. The Cansorti Matrix can be used to prove indepedence of the solution set when 
+ combined with the dimensionality of the solution space given by the difference equation.
+ \subsection{Applications to Markov Chains}
+ 
     
 \end{document}
