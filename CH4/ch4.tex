@@ -118,6 +118,11 @@ vectors. Only Col A utilizes the original matrix in describing its domain. Row o
  and the unique solutions to the nonhomogeneous equation. The Cansorti Matrix can be used to prove indepedence of the solution set when 
  combined with the dimensionality of the solution space given by the difference equation.
  \subsection{Applications to Markov Chains}
- 
+ Markov chains are useful when tied in with difference equations, as they can describe what happens when the state of the chain has a population 
+ matrix applied to it. These chains have steady-state probability vectors, and solving for these vectors requires only taking the probabilty 
+ matrix, removing the identity of the same dimensionality from it, and solving the homogeneous equation. From there, you are left with the 
+ solution vector, which can be modified into the probabilty vector by dividing by the sum of the entries. For regular stochastic matrices, 
+ the probability matrix has a unique steady-state vector, and if the next state can be wholy described by the previous state given any 
+ initial value by these probabilities, then the solution converges to this probability vector. 
     
 \end{document}
