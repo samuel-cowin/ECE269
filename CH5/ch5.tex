@@ -35,5 +35,26 @@ of eigenvectors that each correspond to a distinct eigenvalue, then these vector
 previous state multiplied with the matrix A by the matrix A multiplied with the initial state eigenvector multiplied with eigenvalue of this state to the previous states power. The 
 transformation matrix raised to any power multiplied with \textbf{x} is equivalent to the eigenvalue raised to the same power multiplied with \textbf{x}. Multiples of eigenvalues are 
 eigenvalues for the same scalar multiple of the matrix that the original eigenvalue was an eigenvalue for. 
+\subsection{The Characteristic Equation}
+To find the eigenvalues for a given matrix, you must find $\lambda$ values that will make the matrix not invertible. This is done by finding $\lambda$ values that make the following true:
+\newline
+$$
+det(A-\lambda I=0)
+$$
+\newline
+Finding the roots of this equation yields the eigenvalues. This transformed the equation with two unknown in $\lambda$ and \textbf{x} into one with only one unknown in $\lambda$. To 
+summarize previous findings, the determinant can be determined for higher order matrices by reducing to echelon form the matrix, and then multiplying -1 to the power of row interchanges 
+needed by the pivot position values. If this value is 0, the matrix is not invertible. A scalar satisfying the above equation solves the characteristic equation. The degree of the 
+characteristic equation is equivalent to the size of the matrix for an \textit{n x n} matrix. 
+\newline
+\newline
+A matrix A is similar to the matrix B if there is an invertible matrix P such that $P^{-1}AP=B$ and this is referred to as the similarity transformation. If one matrix A and another B are 
+similar, then they have the same characteristic polynomial and thus the same eigenvalues with the same multiplicities. Row operations normally change eigenvalues, so row equivalent 
+matrices are not similar. Additionally, matrices with the same eigenvalues are not necessarily similar. Example 5 on Page 280 neatly explains the application of eigenvalues to 
+dynamical systems. To get the expression for the initial state, find the scalar values that allow the eigenvectors to equate the initial state, thus giving you the full equation. 
+All that was needed was the transformation matrix and the initial value of the system. Why the dynamical systems tend to a steady state value is that this steady state is a multiple 
+of one of the eigenvectors for the matrix. The other eigenvectors drop out due to raising their $\lambda$ values to an increasing power - so they trend to zero. 
+\subsection{Diagonolization}
+
 
 \end{document}
