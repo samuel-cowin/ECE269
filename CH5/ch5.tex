@@ -55,6 +55,18 @@ dynamical systems. To get the expression for the initial state, find the scalar 
 All that was needed was the transformation matrix and the initial value of the system. Why the dynamical systems tend to a steady state value is that this steady state is a multiple 
 of one of the eigenvectors for the matrix. The other eigenvectors drop out due to raising their $\lambda$ values to an increasing power - so they trend to zero. 
 \subsection{Diagonolization}
-
+If a given matrix is similar to a diagonol matrix, then this matrix is diagonolizable. For this to be true, the matrix has to have n (power of the matrix) linearly indpendent eigenvectors. 
+Furthermore, the columns of P (used to determine similarity) must be n linearly independent eigenvectors of the matrix. For this case, the diagonol matrix has eigenvalues for A that 
+correspond to the eigenvectors of P. In summary, there needs to be enough eigenvectors to form a basis of A. 
+There are four steps for finding if a given matrix is diagonolizable:
+\begin{itemize}
+    \item Find the eigenvalues of the given matrix by utilizing the characteristic equation and solving for the roots including multiplicities
+    \item Find n linearly independent eigenvectors of the matrix by using the vector equation and the found eigenvalues
+    \item Construct P from any combination of the eigenvectors as columns
+    \item Construct D from the same order of eigenvalues in a diagonol matrix
+\end{itemize}
+If there are n eigenvalues for an \textit{n x n} matrix, it is diagonolizable, but this is not a requirement as multiplicities can factor in as well. The kth power of the matrix is the 
+Diagonolization of the matrix to the kth power with the similarity matrices on each side. The transformation matrix and the eigenvectors can be multiplied in order to determine the 
+product of the eigenvalues and the eigenvectors to isolate the eigenvalues. 
 
 \end{document}
