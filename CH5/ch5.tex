@@ -81,5 +81,45 @@ If $\beta$ is the basis for the space and formed by the P matrices from the diag
 remember that any multiple of the eigenvectors through the free variable is considered a valid basis. Inversely, to find the beta matrix given the transformation matrix and the beta 
 representations (P matrix), multiplying first by the inverse of P and then the transformation matrix, and then the P matrix yields the beta matrix. The Jordan form of the 
 transformation matrix is a nondiagonol matrix that also is similar to the transformation matrix and thus also accurately describes the transformation. 
-
+\subsection{Complex Eigenvalues}
+Let A be a real \textit{2 x 2} matrix with a complex eigenvalue $\lambda = a-bi$ with b not being 0, and corresponding eigenvector \textbf{v}, then $A=PCP^{-1}$ where $P=\begin{bmatrix}
+    Re{\mathbf{v}} & Im{\mathbf{v}}
+\end{bmatrix}$
+$$C=\begin{bmatrix}
+    a & -b \\
+    b & a
+\end{bmatrix}$$
+\subsection{Discrete Dynamical Systems}
+When you have all of the eigenvalues of a system less than one, the origin (or point where the equation approaches) is called an attractor and the direction of greatest attraction is 
+along the line through the zero vector and the eigenvector for the smaller eigenvalue. The opposite is true when both eigenvalues are greater than 1, being a repeller, and the 
+direction of repellant is along the line through the zero vector and the eigenvector of the larger eigenvalue. Rejection and attraction are determined in the same way, and the saddle 
+point is the location that movement is from. For matrices that are not diagonol, a change of variable and some algebra produce a matrix that utilizes only diagonols. A similar 
+interpretation is made when there are complex eigenvalues and eigenvectors. If the absolute value of the eigenvalues is greater than 1, then the zero vector is a repeller and 
+the iterates of the initial vector spiral outwards from the origin. The opposite is true if the absolute value of the eigenvalues is less than 1. Given a dynamical system 
+and an initial value, solving for the coefficients is done with the initial state and eigenvectors, and from there the dynamical system is made from the eigenvalues, coefficients, 
+and eigenvalues. 
+\subsection{Applications to Differential Equations}
+Eigenvalue-eigenvector pairs form solutions to the differential equation. Exponentials are necessary in this case as the derivative of the exponential will help to maintain the equality 
+of the derivative equaling the matrix multiplied with the vector that is differentiated. Combining the eigenfunctions with the initial values works to yield the coefficients for the 
+solutions. Complex eigenvalue-eigenvector pairs can be mapped into the real realm for solutions to the differential equations through the following expansions:
+\newline
+$$
+e^{(a+bi)t}=e^{at}+e^{ibt}=e^{at}(cos(bt)+isin(bt))
+$$
+\newline
+From there, the following equations show the solutions after the change in variable for any dimensionality:
+\newline
+$$
+\mathbf{y_1(t)}=Re\mathbf{x_1(t)}=[(Re\mathbf{v})cos(bt)-(Im\mathbf{v})sin(bt)]e^{at}
+$$
+$$
+\mathbf{y_2(t)}=Im\mathbf{x_1(t)}=[(Re\mathbf{v})sin(bt)+(Im\mathbf{v})cos(bt)]e^{at}
+$$
+\newline
+Spiral points are another means to describe graphically what the solution space is doing and are a result of the trigonometric properties of the solutions from the complex eigenvalues. 
+\subsection{Iterative Estimates for Eigenvalues}
+An approximation for the dominant eigenvalue can be found in 5.8 on page 323 through Example 1. Multiplying the initial matrix with the initial state and scaling by the largest absolute 
+value term yields the approximate largest eigenvalue and an eigenvector over time. The rate of convergence for this method depends on the ratio of the eigenvalues. For finding any eigenvalue, 
+using the inverse power method with rough estimates for the eigenvalues can find you solutions to certain degrees of certainty. If there is no known estimate, zero can be used as an initial 
+eigenvalue estimate to find the smallest eigenvalue. QR methods are more advanced and are used by Matlab in order to implement the same functionality as described here. 
 \end{document}
