@@ -68,5 +68,18 @@ There are four steps for finding if a given matrix is diagonolizable:
 If there are n eigenvalues for an \textit{n x n} matrix, it is diagonolizable, but this is not a requirement as multiplicities can factor in as well. The kth power of the matrix is the 
 Diagonolization of the matrix to the kth power with the similarity matrices on each side. The transformation matrix and the eigenvectors can be multiplied in order to determine the 
 product of the eigenvalues and the eigenvectors to isolate the eigenvalues. 
+\subsection{Eigenvectors and Linear Transformations}
+The linear transformation T onto \textbf{x} can be viewed as left multiplication by the matrix M on the basis of \textbf{x}. The matrix M is called the matrix for T relative to the bases 
+$\beta$ and $\zeta$. In order to map this correctly, the $\beta$ mapping to $\zeta$ through T needs to be understood. If this is the case, M is found by combining the columns of 
+the mappings of the $\beta$ components. If T is the identity matrix, then this reduces to a change of coordinates computation. When the dimensionality between the two spaces is the same 
+and the coordinates for the bases are the same, then the mapping is referred to as the matrix for T relative to $\beta$. The images of the basis vectors are what the transformation for 
+a given vector becomes. Basically for a polynomial, what the variable multiplied with the coefficients turns into after the transformation. From there, the $\beta$-coordinate vectors 
+are how those transformations map into the original space based on the variables remaining. 
+\newline
+\newline
+If $\beta$ is the basis for the space and formed by the P matrices from the diagonolization section, then D, the diagonol from that section, is the $\beta$-matrix. It is important to 
+remember that any multiple of the eigenvectors through the free variable is considered a valid basis. Inversely, to find the beta matrix given the transformation matrix and the beta 
+representations (P matrix), multiplying first by the inverse of P and then the transformation matrix, and then the P matrix yields the beta matrix. The Jordan form of the 
+transformation matrix is a nondiagonol matrix that also is similar to the transformation matrix and thus also accurately describes the transformation. 
 
 \end{document}
