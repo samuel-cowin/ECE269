@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 6}
+\author{Sam Cowin}
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+\section{Matrix Algebra}
+\section{Determinants}
+\section{Vector Spaces}
+\section{Eigenvalues and Eigenvectors}
+\section{Orthoginality and Least Squares}
+There are many problems in which there is no actual solution or the size of the solution space is too large to accurately determine the appropriate solution. For problems like this, 
+Orthoginality and least squares provide approximations that enable you to determine close solutions while saving on the time or the complexity of determining exact solutions. 
+\subsection{Inner Product, Length, and Orthoginality}
+The inner product is also referred to as the dot product and the result of the product is a scalar value. These can be verified, but the inner product is communatative and additional 
+properties of this operation can be found on page 333 of the text. The norm of a vector is defined as $\norm{\mathbf{v}}=\sqrt{\mathbf{v}\cdot \mathbf{v}}=\sqrt{\mathbf{v_1^2}
++\mathbf{v_2^2}+\dots+\mathbf{v_n^2}}$ with $\norm{\mathbf{v}}^2=\mathbf{v\cdot v}$. A vector whose length is one is referred to as the unit vector. By dividing a vector by its 
+length, we are transforming a vector into a unit vector, and this process is referred to as normalizing the vector. Unit vectors can also be the negative vectors as the distance is 1. 
+The distance between two vectors is the length of the norm of the difference between the two vectors. Two vectors are orthogonal to each other if their dot product is zero. A special 
+case of this is with the zero vector in that every other vector is orthogonal to it. An extension of orthogonality is that two vectors are orthogonal if and only if the square of 
+norm of their sum is equal to the sum of their norm's squared. In order to be orthogonal to a set a vector needs to be orthogonal to every vector in the set spanning the space that is 
+under question. The orthogonal complement of the row space of a matrix is the null space of that matrix and the orthogonal complement of the column space is the null space of the 
+transpose of the same matrix. The orthogonal complement for a plane through the origin is a line through the origin as well. For two vectors in either 2D or 3D space, there is a nice 
+connection between the angle between the two vectors and the inner product of the two vectors. The inner product of the two vectors is equal to the norms of those two vectors multiplied 
+with the cosine of the angle between the two. 
+
+
+\end{document}
