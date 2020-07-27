@@ -64,6 +64,15 @@ stems from the theorem that the projection of the vector in the subspace is the 
 of the projection drops out since it is 1, and this simplifies the calculation for the projection. Thus, the projection for a vector with an orthonormal basis is given by the basis 
 multiplied with the transpose (inverse for orthonormal) of the basis and then the vector in question. 
 \subsection{The Gram-Schmidt Process}
-
+The purpose of this section is to outline algorithms to form orthogonal or orthonormal bases for a given nonzero subspace. For a given basis of a subspace, to find the orthogonal basis 
+of the subspace you first assign one of the vectors into the orthogonal basis, then using this vector, you project one of the original basis vectors onto this orthogonal basis vector 
+by subtracting the parallel component out of the projection, then you use the result of that projection to project an additional basis vector into the orthogonal basis vector by 
+subtracting out the parallel component from that projection. This process is repeated for as many basis vectors as needed to describe the subspace. An orthonormal basis is easily formed 
+from the orthogonal basis as you just normalize each vector component by the length of the basis vector it helps to represent. 
+\newline
+\newline
+If A is an \textit{m x n} matrix with linearly independent columns, then A can be factored as A=QR. Q corresponds to the \textit{m x n} matrix whose columns form an orthonomal basis for 
+Col A and R is a \textit{n x n} upper triangular invertible matrix with positive entries on the diagonol. Finding R is equivalent to multiplying the transpose of Q by A. 
+\subsection{Least-Squares Problems}
 
 \end{document}
