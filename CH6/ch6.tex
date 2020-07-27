@@ -36,6 +36,34 @@ under question. The orthogonal complement of the row space of a matrix is the nu
 transpose of the same matrix. The orthogonal complement for a plane through the origin is a line through the origin as well. For two vectors in either 2D or 3D space, there is a nice 
 connection between the angle between the two vectors and the inner product of the two vectors. The inner product of the two vectors is equal to the norms of those two vectors multiplied 
 with the cosine of the angle between the two. 
+\subsection{Orthogonal Sets}
+If there is a set of vectors within a region where all of the pairs of vectors within the set are orthogonal, then the set is linearly independent and the set is a basis for the region. 
+For orthogonal sets, the scalar weights for the linear combination of the basis needed to compose the vectors in the region is given by the following formula:
+\newline
+$$
+c_j=\dfrac{\mathbf{y}\cdot \mathbf{u}_j}{\mathbf{u}_j\cdot \mathbf{u}_j}
+$$
+\newline
+A useful extension of this theorem is that of projection. With this, we are trying to write the vector in terms of a scalar multiple of one of the basis vectors as well as a vector that 
+is orthogonal to the basis vector chosen. This is only achievable when the inner product of those two vectors chosen for the decomposition is zero. This leads to the previous formula being 
+useful for determining the weight that needs to be applied to the basis vector to showcase the vector component in that direction. This is also called projecting the vector onto the 
+basis vector. This projection is then subtracted from the vector in question to determine the other decomposition component to describe the vector. The two components then form an 
+orthogonal set describing the vector. These theorems can be used with the basis to describe any vector in a region as the components projected onto each of the basis vectors. Vectors can 
+form an orthonormal set if they are a orthogonal basis with each vector being of length 1. For a given \textit{m x n} matrix, it has orthonormal columns if and only if the transpose 
+of this matrix multiplied with the original matrix is the identity matrix. Orthonormal matrices that are also square have the useful property of their inverse being equal to the 
+transpose and are referred to as orthogonal matrices. Additionally, the rows of such a matrix are also orthonormal. 
+\subsection{Orthogonal Projections}
+A couple properties that stem from the findings in the previous section are that this projection is the unique vector in the space where the vector minus the projection of the vector is 
+orthogonal to the space, and the projection is the closest vector within the space to the vector in question. These properties are the building blocks to least squares solutions to 
+linear problems. Any vector can be written in terms of the projection for that vector to the space in question and the projection of that vector to the orthogonal space in question. 
+It is often useful to understand how many components from the original orthogonal space are needed to span the space in question and use the rest to describe the orthogonal space. 
+These two vectors, comprising of multiple orthogonal parts, can describe any vector in question for the given space. The number of terms in the orthogonal projection of the vector 
+is equal to the number of terms in the dimensionality. This makes sense as each basis vector in the vector space needed to span the space is also needed as a component to represent 
+a given vector in this space. If a given vector is in a given vector space, the projection of this vector into this space is just the vector itself as it forms the basis. This also 
+stems from the theorem that the projection of the vector in the subspace is the closest point to that vector for the subspace. If the basis is orthonormal, then the denominator 
+of the projection drops out since it is 1, and this simplifies the calculation for the projection. Thus, the projection for a vector with an orthonormal basis is given by the basis 
+multiplied with the transpose (inverse for orthonormal) of the basis and then the vector in question. 
+\subsection{The Gram-Schmidt Process}
 
 
 \end{document}
