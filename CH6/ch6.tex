@@ -74,5 +74,33 @@ from the orthogonal basis as you just normalize each vector component by the len
 If A is an \textit{m x n} matrix with linearly independent columns, then A can be factored as A=QR. Q corresponds to the \textit{m x n} matrix whose columns form an orthonomal basis for 
 Col A and R is a \textit{n x n} upper triangular invertible matrix with positive entries on the diagonol. Finding R is equivalent to multiplying the transpose of Q by A. 
 \subsection{Least-Squares Problems}
+The idea behind this form of a problem is to find a solution \textbf{x} that brings the length of the difference between the result \textbf{b} and \textbf{Ax} as low as possible or at 
+least smaller than a given error point that is desired. The idea is to make the chosen \textbf{Ax} the closest point in Col A to \textbf{b} through projections. The solution of the general 
+least squares problem is finding the projection \textbf{x} that satisfies the projection of \textbf{b} into the Col space of A. These same solutions for the least squares problem 
+correspond to the set of solutions to the normal equations which are depicted by $A^TA\mathbf{x}=A^T\mathbf{b}$. For a given solution that you are after and the transformation matrix, 
+the least squares solution is easily found through the normal equations by either matrix algebra or row reduction. The least-squares solution is only achievable this way when the criteria next are followed:
+\begin{itemize}
+    \item The matrix equation has a unique least-squares solution for each result desired. 
+    \item The columns of A are linearly independent.
+    \item The matrix left multiplied with its transpose is invertible. 
+\end{itemize}
+Often in these applications the point is to minimize the least-squares error. This value is the ultimate distance between the desired result and the value achieved through the transformation 
+matrix mulitplied with the found least-squares solution. When the columns of A are orthogonal, applying the projections onto each of the components of the transformation matrix 
+yields the least-squares solution immediately. To minimize error, a QR factorization can be used to calculate the least-squares solution by left multiplying the inverse of R by 
+the left multiplication of the transpose of Q with the result matrix. Row reduction can instead be used with R and the left multiplication of the transpose of Q and the result 
+to avoid inversion. If the result matrix or the projection of the result into the Col space of A are zero (orthogonal to \textbf{Ax}), then the solution is just solving the homogeneous equation.
+\subsection{Applications to Linear Models}
+Instead of using the x values from the raw data in order to find the least squares regression, you can take the mean-deviation form by subtracting out the mean from each of the x 
+data points. The two columns of the design matrix will then be orthogonal and the solutions for the normal equations are simplified. Mulitple regression and linear models with multiple 
+variables can all be described with the matrix equation we have already utilized. 
+\subsection{Inner Product Spaces}
+The same rules for inner products on individual vectors apply to the vector space to make up an inner product space. Functions or polynomials that are defined in the vector space are treated 
+as vectors when they are considered as an element in a vector space. To interpret them as vectors, time steps are usual considered for the entries and make up the elements. The norm 
+of the projection of a vector onto a subspace cannot exceed the norm of the vector itself. This aides in finding the Cauchy-Schwarz Inequality which says the absolute value of the inner 
+product of two vectors is less than or equal to the product of the norm of those vectors. Similarly, the norm of the sum of two vectors is less than or equal to the sum of their individual 
+norms. An definite integral of the product of two functions can be interpretted as the inner product of those functions and thus an extension of the properties found is immediate. 
+\subsection{Applications of Inner Product Spaces}
+Weights can be extended to the normal equation used to determine the least-squares solution in order to vary the reliance on different data points. The weights are applied to every result 
+matrix and transformation matrix from the previous equation. The Fourier Series can be derived from the expansion of the information learned in this chapter. 
 
 \end{document}
