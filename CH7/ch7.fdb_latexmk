@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1595954015 "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.tex" "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.pdf" "ch7" 1595954016
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.aux" 1595954016 1129 0b7e9e0a0e9fe791e1915a6e45f007aa ""
-  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.tex" 1595954014 4954 c07feef53e9d8b825fb0785288be18aa ""
+["pdflatex"] 1595960551 "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.tex" "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.pdf" "ch7" 1595960552
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.aux" 1595960552 1390 f80dbc9798afcf5fc94ab3c248a30069 ""
+  "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.tex" 1595960551 8290 5800a9cdd3bd4052bc8e8cf012b55071 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -159,11 +159,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "ch7.aux" 1595954016 1129 0b7e9e0a0e9fe791e1915a6e45f007aa "pdflatex"
-  "ch7.tex" 1595954014 4954 c07feef53e9d8b825fb0785288be18aa ""
+  "ch7.aux" 1595960552 1390 f80dbc9798afcf5fc94ab3c248a30069 "pdflatex"
+  "ch7.tex" 1595960551 8290 5800a9cdd3bd4052bc8e8cf012b55071 ""
   (generated)
+  "ch7.pdf"
+  "ch7.aux"
   "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.log"
   "ch7.log"
-  "ch7.aux"
-  "ch7.pdf"
   "/Users/samcowin/Documents/San Diego/UCSD/Classes/ECE269/Notes/linear_algebra/CH7/ch7.pdf"

@@ -54,6 +54,25 @@ scaled or shifted out of place. What the cross-product terms do is move the solu
 axes that put the solution set back into a standard position. The quadratic form is positive definite if all of the values are greater than zero for values not zero, negative definite 
 follows similarly, and indefinite is when the form does not have only positive or negative values. These relationships are directly related to the eigenvalues. 
 \subsection{Constrained Optimization} 
-
-
+The change of variable and the normalization for the unit Eigenvectors enables solving an optimization problem in finding the minimum and maximum values for a given quadratic form. 
+When you have the unit eigenvectors, the minimum and maximum eigenvalues correspond to the minimum and the maximum of the quadratic form. If the transpose of the solution with the unit 
+vector is zero, then the second largest (smallest) eigenvalue is chosen in place for the max (min). This continues for k-1 values that are not being utilized in the quadratic form. The 
+kth unit eigenvector for the kth eigenvalue is the point of optimization. A way to change the variables of a non-unit quadratic form is to divide through to get 1 as the result, and then 
+to change the squared variables and coefficients to be the new variables. 
+\subsection{The Singular Value Decomposition}
+The singular values for a given matrix are the square roots of the eigenvalues of the transpose of the matrix multiplied with itself. This holds for the unit vectors, and the singular values 
+are equivalent to the length of the matrix multiplied with the eigenvector of the tranpose square. The second singular value or eigenvalue can also be interpretted as the maximum over all 
+unit vectors that are orthogonal to the first eigenvector. The matrix/eigenvector products of the transpose square forms an orthogonal basis for the original matrix column space and 
+the rank of such a matrix is equal to the number of components in the basis - excluding zero singular values. The singular values combined with zeros in a matrix to form a sized matrix equal 
+to the original matrix is the singular value decomposition of the matrix as long as there are left singular vectors and right singular vectors that are orthogonal to the SVD with the squared 
+dimensions of the original matrix. The right singular vectors are formed by the unit eigenvectors of the transpose square of the matrix. The normalized unit vectors of the singular values 
+form the left singular vectors. In the case when the left or right singular vectors  do not complete the orthonormal basis for the dimensionality they need, extending the basis by finding 
+vectors orthogonal to the vector already found and normalizing is the way to go. Orthoginality can be found by taking the first vector as an equation and finding the basis for the solution 
+set. A matrix is invertible is it has n nonzero singluar values. 
+\subsection{Applications to Image Processing and Statistics}
+The diagonol entries in the covariance matrix are just the variance of the components on the diagonol. The other components of the covariance matrix determine the correlation bewteen 
+variables. The goal of principal component analysis is to find a matrix transformation that makes the covariance matrix into another one that is completely uncorrelated and that lists the 
+individual variances in decreasing order. The principal components of the data are the unit eigenvectors of the covariance matrix and are lienar combinations of the variables. 
+The eigenvalues then correspond to the variance of the individual variables. The percentage of the variance encaptured in each principal component describes the importance of that value 
+and if the discrepency is large enough, can be used to reduce the dimensionality of the data. 
 \end{document}
