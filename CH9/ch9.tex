@@ -62,7 +62,22 @@ possible. If there is a row that is recessive to another row (every value is les
 obtain a new matrix. If a column is dominant to another column, then that column can be deleted to acquire another matrix. The new matrix will have the same solution to the game as the previous 
 one. The reduced matrix can also be used to determine the optimal y. 
 \subsection{Linear Programming - Geometric Method}
+This method involves transforming systems of inequalities and restrictions into the canonical form for graphing. The solutions can only occur at the extreme points, thus intersections and 
+feasible sets are attained and then understood through the graph. 
 \subsection{Linear Programming - Simplex Method}
+Slack variables can be introducted to inequalities in order to translate them into equalities to simplify calculations. These variables are referred to as basic variables and the solution 
+corresponding to the zero vector is just the basic variables set equal to the inequality values. Basic row operations can be used to bring not basic variables into the solution. 
+While checking for feasibility, the extremes of the problem set all occur on these solutions that are found through the operations. You pivot the variables on the equation in which the 
+inequality value divided by the coefficient of the term you want to pivot is the smallest as long as the coefficient of that term is positive. Row reduction and use of augmented matrices 
+reduced the headache of this method. The Simplex Method involves using the objective function to optimize the reward and uses this function to determine the pivots of the table. If the 
+function can be further increased by modifying a variable, it is not optimal. The variable to bring into the solution is also chosen by whichever is largest as this will bring the most change 
+to the objective function. The full method is outlined on page 32 of the text. Unbounded solutions arise when there is a need to pivot on a variable that has no positive coefficients. Cycling 
+may occur when there are equal smallest ratios to pivot on. There must be less than signs in the canonical form, thus for minimization problems you inverse the objective function and 
+maximize over the new funciton while flipping any inequalities you need to through negatives on both sides. The opposite of a maximization for a minimize problem is the solution to the 
+original minimization. 
 \subsection{Duality}
+There is a dual minimization problem that is formed from the same data provided for the maximization data. The slack variables are the point of optimality for the dual problem and the solution 
+is the same, just in different context. The dual may provide context that was not readily available in the primal version - such as the marginal values of a good in an economic sense being the 
+variables of the dual. Optimal mixed strategies are found by normalizing the variables with the maximum objective function result across the variables for a given player. 
 
 \end{document}
