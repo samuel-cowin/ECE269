@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 6}
+\author{Sam Cowin}
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+\section{Matrix Algebra}
+\section{Determinants}
+\section{Vector Spaces}
+\section{Eigenvalues and Eigenvectors}
+\section{Orthoginality and Least Squares}
+\section{Symmetric Matrices and Quadratic Forms}
+\section{The Geometry of Vector Spaces}
+\section{Optimization}
+This section discusses linear programming and the optimization of such problems as described as hyperplanes and convex sets. This practice extends to many applications in optimization 
+including Reinforcement Learning as seen in David Silver's Lectures. Convex Optimization is an additional course that should be taken at UCSD in order to deeply understand these 
+principles. 
+\subsection{Matrix Games}
+Two-person zero sum games are described as matrix games in which the algebraic sum of the rewards from each player sums to zero. These games are outlined as the row player reward from the 
+column player for given actions by each person - thus the matrix implementation. A saddle point in such a matrix is a point designated by row i and column j in which the minimum of i 
+and the maximum of j are the same point. The column player will choose to select the minimum of the maximum since this designates minimizing the competitive gain and the row player 
+will choose to maximize the minimum as this is choosing to minimize loss. When there is no saddle point, there is still a policy that can achieve optimal reward. The strategy space 
+for player R is the set of all probability vectors corresponding to the number of possible moves m and similar the strategy space for the player C is the set of all probability 
+vectors n for the \textit{m x n} matrix. If one of the strategies is 1 while the others are zero, then this is called a pure strategy. The pure strategies are the standard basis 
+vectors for a given dimension and the linear combniation of all of these pure strategies with nonnegative weights is what sums to 1. The expected payoff, due to the independence 
+of the choices in the players, is the probabilities they select each of the moves multiplied with the value for what the column player will have to give to the row player. The 
+value for a given strategy chosen is the minimum expected value for that given action. Phrased differently, due to the optimal selection of the column player being a pure strategy, 
+the minimum of the inner product of the strategy of the row player and the reward matrix yields the value matrix. The job of the row player is to maximize over this value matrix 
+and the optimal strategy is deduced when the value of the given policy equals that of the value matrix. If the column player were to play poorly, then the value could of course be 
+higher than expected. There is a similar deduction for the column player in which the minimum over the maximum row value for the value matrix multiplied with the y strategy can 
+be optimized. The value function for the row player is less than or equal to the column player. 
+\newline
+$$
+E(\mathbf{x},\mathbf{y})=\mathbf{x^T}A\mathbf{y} \\
+E(\mathbf{x, e_j})=min_j\mathbf{x\cdot a_j} \\
+E(\mathbf{e_i, y})=max_irow_i(A)\mathbf{y}
+$$
+\newline
+For a given matrix game, the true value matrix for each player is equal and thus the minimum of the maximum of the expected values of each of the moves is equal to the maximum of the minimum 
+of the expected values for the moves. The value of the game is thus designated by v and any pair of optimal strategies is the solution to the game. Every game has a solution. Parameterizing 
+a \textit{2 x n} matrix game with 1-t and t for the x values quickly resolves the game into n linear combinations of two values for the value matrix. Utilizing the fact that the optimal 
+x guarantees that y is convex, the coefficients for the optimal y strategy must sum to 1. For each coordinate in which the optimal x is not zero, the optimal y is also equal to this result 
+and can be used to find the optimal y in conjunction with the equation that the coefficients all add to 1. The columns that are present are determined by the columns that make up the optimal 
+x solution. Succinctly, the expected value of the optimal y and the coefficients uniquely determine optimal y from optimal x. 
+\newline
+\newline
+While linear programming is often used to solve the general game setting, the graphical method above is useful for the \textit{2 x n} case. Reducing matrices to this easier case is sometimes 
+possible. If there is a row that is recessive to another row (every value is less than or equal to and at least one value is less than the other row) than the recessive row can be deleted to 
+obtain a new matrix. If a column is dominant to another column, then that column can be deleted to acquire another matrix. The new matrix will have the same solution to the game as the previous 
+one. The reduced matrix can also be used to determine the optimal y. 
+\subsection{Linear Programming - Geometric Method}
+\subsection{Linear Programming - Simplex Method}
+\subsection{Duality}
+
+\end{document}
