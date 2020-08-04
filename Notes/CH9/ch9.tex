@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 6}
+\author{Sam Cowin}
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+\section{Matrix Algebra}
+\section{Determinants}
+\section{Vector Spaces}
+\section{Eigenvalues and Eigenvectors}
+\section{Orthoginality and Least Squares}
+\section{Symmetric Matrices and Quadratic Forms}
+\section{The Geometry of Vector Spaces}
+\section{Optimization}
+This section discusses linear programming and the optimization of such problems as described as hyperplanes and convex sets. This practice extends to many applications in optimization 
+including Reinforcement Learning as seen in David Silver's Lectures. Convex Optimization is an additional course that should be taken at UCSD in order to deeply understand these 
+principles. 
+\subsection{Matrix Games}
+Two-person zero sum games are described as matrix games in which the algebraic sum of the rewards from each player sums to zero. These games are outlined as the row player reward from the 
+column player for given actions by each person - thus the matrix implementation. A saddle point in such a matrix is a point designated by row i and column j in which the minimum of i 
+and the maximum of j are the same point. The column player will choose to select the minimum of the maximum since this designates minimizing the competitive gain and the row player 
+will choose to maximize the minimum as this is choosing to minimize loss. When there is no saddle point, there is still a policy that can achieve optimal reward. The strategy space 
+for player R is the set of all probability vectors corresponding to the number of possible moves m and similar the strategy space for the player C is the set of all probability 
+vectors n for the \textit{m x n} matrix. If one of the strategies is 1 while the others are zero, then this is called a pure strategy. The pure strategies are the standard basis 
+vectors for a given dimension and the linear combniation of all of these pure strategies with nonnegative weights is what sums to 1. The expected payoff, due to the independence 
+of the choices in the players, is the probabilities they select each of the moves multiplied with the value for what the column player will have to give to the row player. The 
+value for a given strategy chosen is the minimum expected value for that given action. Phrased differently, due to the optimal selection of the column player being a pure strategy, 
+the minimum of the inner product of the strategy of the row player and the reward matrix yields the value matrix. The job of the row player is to maximize over this value matrix 
+and the optimal strategy is deduced when the value of the given policy equals that of the value matrix. If the column player were to play poorly, then the value could of course be 
+higher than expected. There is a similar deduction for the column player in which the minimum over the maximum row value for the value matrix multiplied with the y strategy can 
+be optimized. The value function for the row player is less than or equal to the column player. 
+\newline
+$$
+E(\mathbf{x},\mathbf{y})=\mathbf{x^T}A\mathbf{y} \\
+E(\mathbf{x, e_j})=min_j\mathbf{x\cdot a_j} \\
+E(\mathbf{e_i, y})=max_irow_i(A)\mathbf{y}
+$$
+\newline
+For a given matrix game, the true value matrix for each player is equal and thus the minimum of the maximum of the expected values of each of the moves is equal to the maximum of the minimum 
+of the expected values for the moves. The value of the game is thus designated by v and any pair of optimal strategies is the solution to the game. Every game has a solution. Parameterizing 
+a \textit{2 x n} matrix game with 1-t and t for the x values quickly resolves the game into n linear combinations of two values for the value matrix. Utilizing the fact that the optimal 
+x guarantees that y is convex, the coefficients for the optimal y strategy must sum to 1. For each coordinate in which the optimal x is not zero, the optimal y is also equal to this result 
+and can be used to find the optimal y in conjunction with the equation that the coefficients all add to 1. The columns that are present are determined by the columns that make up the optimal 
+x solution. Succinctly, the expected value of the optimal y and the coefficients uniquely determine optimal y from optimal x. 
+\newline
+\newline
+While linear programming is often used to solve the general game setting, the graphical method above is useful for the \textit{2 x n} case. Reducing matrices to this easier case is sometimes 
+possible. If there is a row that is recessive to another row (every value is less than or equal to and at least one value is less than the other row) than the recessive row can be deleted to 
+obtain a new matrix. If a column is dominant to another column, then that column can be deleted to acquire another matrix. The new matrix will have the same solution to the game as the previous 
+one. The reduced matrix can also be used to determine the optimal y. 
+\subsection{Linear Programming - Geometric Method}
+This method involves transforming systems of inequalities and restrictions into the canonical form for graphing. The solutions can only occur at the extreme points, thus intersections and 
+feasible sets are attained and then understood through the graph. 
+\subsection{Linear Programming - Simplex Method}
+Slack variables can be introducted to inequalities in order to translate them into equalities to simplify calculations. These variables are referred to as basic variables and the solution 
+corresponding to the zero vector is just the basic variables set equal to the inequality values. Basic row operations can be used to bring not basic variables into the solution. 
+While checking for feasibility, the extremes of the problem set all occur on these solutions that are found through the operations. You pivot the variables on the equation in which the 
+inequality value divided by the coefficient of the term you want to pivot is the smallest as long as the coefficient of that term is positive. Row reduction and use of augmented matrices 
+reduced the headache of this method. The Simplex Method involves using the objective function to optimize the reward and uses this function to determine the pivots of the table. If the 
+function can be further increased by modifying a variable, it is not optimal. The variable to bring into the solution is also chosen by whichever is largest as this will bring the most change 
+to the objective function. The full method is outlined on page 32 of the text. Unbounded solutions arise when there is a need to pivot on a variable that has no positive coefficients. Cycling 
+may occur when there are equal smallest ratios to pivot on. There must be less than signs in the canonical form, thus for minimization problems you inverse the objective function and 
+maximize over the new funciton while flipping any inequalities you need to through negatives on both sides. The opposite of a maximization for a minimize problem is the solution to the 
+original minimization. 
+\subsection{Duality}
+There is a dual minimization problem that is formed from the same data provided for the maximization data. The slack variables are the point of optimality for the dual problem and the solution 
+is the same, just in different context. The dual may provide context that was not readily available in the primal version - such as the marginal values of a good in an economic sense being the 
+variables of the dual. Optimal mixed strategies are found by normalizing the variables with the maximum objective function result across the variables for a given player. 
+
+\end{document}

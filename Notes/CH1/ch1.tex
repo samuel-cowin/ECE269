@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+
+\begin{document}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 1}
+\author{Sam Cowin}
+
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+This first chapter will go over the basics of linear equations and foundations of formulating systems of linear equations %
+into networks of vectors and matrices for more substanital analysis later in the text.
+
+\subsection{Systems of Linear Equations}
+A linear equation is described as follows:
+\begin{equation}
+    a_1x_1 + a_2x_2 + \dots + a_nx_n = b
+\end{equation}
+A system of linear equations is one or more linear equations as decribed above involving the same variables. %
+Two linear systems are equivalent if the solution set for the two systems is identical. Linear systems are either %
+consistent (have one or infinitely many solutions) or inconsistent (no solution).
+\newline
+\newline
+\noindent A matrix is shown below:
+$$
+\begin{bmatrix}
+    2 & 4 & 6 & 0 \\
+    1 & 3 & 5 & 1 \\
+    7 & 8 & 9 & 2
+\end{bmatrix}
+$$
+\newline
+This is an augmented matrix as the values the equations solve to are included as the right most column. The linear equations are represented%
+ by the other columns in the matrix, starting with the second to right most column being constant coefficients. From there, the degree of the variables%
+ increases by one per column. An \textit{m x n} matrix indicates m rows and n columns. 
+\newline
+\newline
+To solve a system of linear equations, there are three methods in simplifying system:
+\begin{itemize}
+    \item Replacing an equation with the sum of itself and the multiple of another equation
+    \item Interchanging two equations
+    \item Multiplying an equation by a nonzero constant
+\end{itemize}
+Two matrices are said to be row equivalent if these operations can be used to equate one matrix to another. This translates into the two row equivalent matrices %
+having the same solution set. If in reduced form, there is a constradiction in the solution set, then the system of equations is inconsistent (no solution). 
+\newline
+\newline
+\subsection{Row Reduction and Echelon Forms}
+A rectangular matrix is in echelon form (or row echelon) if it has the following properties:
+\begin{itemize}
+    \item All nonzero rows are above any rows of all zeros
+    \item Each leading entry of a row is in a column to the right of the leading entry of the row above it
+    \item All entries in a column below a leading entry are zeros
+\end{itemize}
+Additionally, the following properties yield a reduced row echelon form matrix:
+\begin{itemize}
+    \item The leading entry in each nonzero row is 1
+    \item Each leading 1 is the only nonzero entry in its column
+\end{itemize}
+The terminology of echelon comes from the "steplike" appearance of the matrix entries. There are numerous possibilities for echelon form matricies, but %
+there is a unique reduced echelon form for a given matrix. RREF and REF refer to the reduced echelon forms. Pivot positions are those in the matrix that %
+correspond to the positions of leading 1's in the matrix rows. The forward phase of the process is to obtain echelon form while the backward phase is to %
+obtain reduced echelon form. Partial pivoting (selecting the pivot as the entry with the largest absolute value in a column) reduces rounding error by a %
+computer program.
+\newline
+\newline
+\noindent Below is a reduced echelon form matrix:
+$$
+\begin{bmatrix}
+    1 & 0 & -5 & 1\\
+    0 & 1 & 1 & 4\\
+    0 & 0 & 0 & 0
+\end{bmatrix}
+$$
+\newline
+The solutions are obtained by translating the final column as the constants, while the preceding columns are the linear systems of equations through variables. %
+There are three variables in the above matrix due to there being four columns, and the first two variables are considered basic variables as they are explicitly %
+written in terms of the others. The solutions can be obtained from the reduced echelon form as the basic variables are all described in terms of constants and %
+the free variables. For the free variables, as the third one shown above, you can choose any value, and thus there are infinitely many distinct solutions to the set.
+\newline
+\newline
+\subsection{Vector Equations}
+A matrix with only one column is considered a column vector, or simplified to vector. Examples of these are included below and can include any real numbers. Vectors%
+ are ordered and thus the only equivalents are if they have the same components in each location.
+$$
+\textbf{w}=\begin{bmatrix}
+    \textit{w1}\\
+    \textit{w2}
+\end{bmatrix}
+$$
+\newline
+Example operations that can be executed on vectors include basic arithmetic operations per below. Careful consideration needs to be made to ensure the operations are being%
+done either elementwise or with matrix dimensionality being taken into consideration. Scalars can be multiplied with a vector to yield the scalar multiplied with each %
+element of the matrix.
+$$
+2*\begin{bmatrix}
+    2\\
+    1
+\end{bmatrix}+
+\begin{bmatrix}
+    3\\
+    2
+\end{bmatrix}.*
+\begin{bmatrix}
+    1\\
+    0.5
+\end{bmatrix}=
+\begin{bmatrix}
+    7\\
+    1
+\end{bmatrix}
+$$
+\newline
+\begin{figure}
+\centering
+\resizebox{\textwidth} {12cm} {   
+    \begin{tikzpicture}
+        \draw[thin,gray!40] (-10,10) grid (-10,10);
+        \draw[<->] (-10,0)--(10,0);
+        \draw[<->] (0,-10)--(0,10);
+        \draw[line width=2pt, blue, -stealth] (0,0)--(7,1);
+        \draw[line width=2pt, red, -stealth] (0,0)--(4,2);
+        \draw[line width=2pt, red, -stealth] (4,2)--(7,2);
+        \draw[line width=2pt, green, -stealth] (2,1)--(4,2);
+        \draw[line width=2pt, red, -stealth] (0,0)--(2,1);
+        \draw[line width=2pt, green, -stealth] (7,2)--(7,1);
+    \end{tikzpicture}
+    }
+\caption{Figure demonstrating plotting the result from vector operations above with red being the arithmetic operations, green being scaling, %
+and blue being the result.}
+\end{figure}
+\newline
+Vectors can be in other dimensionality spaces beyond 2D. 3D matrices are represented by a third row in the column vector, and n-dimension spaces %
+are represented by a column vector that is n-entries in length. There is a unique vector, the zero vector, whose entries are all 0 and is written %
+as \textbf{0}.
+\newline
+\newline
+The vector \textbf{y} below is defined as the linear combination of scalar values in c (called weights) and vectors \textbf{v}. 
+
+\begin{equation}
+    \boldsymbol{y} = c_1 \boldsymbol{v_1} + c_2 \boldsymbol{v_2} + \dots +c_n \boldsymbol{v_n}
+\end{equation}
+\newline
+A vector equation as shown above has the same solution set as the linear system whose augemnted matrix includes the variables \textbf{v} from above %
+with the last term of the augmented matrix being \textbf{y}. Specific interesting examples include the scalar multiple of a variable and the zero vector %
+which both can be shown with this format. the Span{\textbf{u}} is the line that includes all scalar multiples of that vector and \textbf{0}. The Span{\textbf{u,v}} %
+is the plane that incorporates all of the scalar multiples of those two vectors as well as \textbf{0}. This is possible since the scalar multiple could be with 0, %
+thus every possible value in that plane is achievable as a linear combination of the two vectors.  
+\newline
+\subsection{The Matrix Equation Ax=b}
+If \textbf{A} is an \textit{m x n} matrix, with columns $\begin{bmatrix}
+    \mathbf{a_1} & \mathbf{a_2} & \mathbf{\dots} & \mathbf{a_n}
+\end{bmatrix}$ %
+and \textbf{x} is a weight column vector, then the product of \textbf{A} and \textbf{x} is the linear combination of the components of %
+\textbf{A} with \textbf{x} as the weights for the components. Below shows this equation.
+$$
+    \boldsymbol{Ax} = 
+    \begin{bmatrix}
+        \mathbf{a_1} & \mathbf{a_2} & \mathbf{\dots} & \mathbf{a_n}
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        \vdots\\
+        x_n
+    \end{bmatrix} = x_1\mathbf{a_1} + x_2\mathbf{a_2} + \mathbf{\dots} + x_n\mathbf{a_n}
+$$
+\newline
+The dimensionality of \textbf{x} needs to match the number of columns present in \textbf{A} for the operation to make sense. Any equation can be written in this format %
+by taking the coefficients as the weight vector, and the variables as the \textit{m x n} matrix to which the scalar coefficients are applied. The equation \textbf{Ax=b} %
+has a solution if and only if \textbf{b} is a linear combination of the columns of \textbf{A}.
+\newline
+\newline
+The identity matrix and dot product are showcased below.
+$$
+\begin{bmatrix}
+    1 & 0 & 1\\
+    0 & 1 & 0\\
+    0 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+    x_1\\
+    x_2\\
+    x_3
+\end{bmatrix} = \begin{bmatrix}
+    1\cdot x_1 + 0\cdot x_2 + 0\cdot x_3\\
+    0\cdot x_1 + 1\cdot x_2 + 0\cdot x_3\\
+    0\cdot x_1 + 0\cdot x_2 + 1\cdot x_3
+\end{bmatrix} = \begin{bmatrix}
+    x_1\\
+    x_2\\
+    x_3
+\end{bmatrix}
+$$
+\newline
+Depedning on the programming language you may want to modify the method of multiplication to increase speed. An example being that C stores matrices as rows and you would %
+need to modify the program to interpret the data in this manner. 
+\subsection{Solution Sets of Linear Systems}
+Homogeneous systems of linear equations are those that can be written in the form \textbf{Ax=0} with 0 being the zero vector. There is a trivial solution to this problem %
+recognizing \textbf{x} can be the zero vector, but the interesting problem is seeing if there is a nontrival solution to the equation. This is true if and only if %
+the equation has at least one free variable per the reduced echelon form described previously. 
+\newline
+\newline
+A linear equation written plainly can be referred to as an implicit defnition of a plane given there are two or more free variables. Solving the equation to yield the vectors %
+descirbing the solution of the equation is an explicit defnition of the plane spanned by these vectors. Another name for the explicit definition is the parametric vector%
+ equation. A solution written in parametric vector notation for a homogeneous solution is as shown below.
+\begin{equation}
+     \mathbf{x} = s\mathbf{u}+t\mathbf{v}
+\end{equation}
+When only one vector needs to be utilized in parametric vector form, the solution can be described by a line. 
+\newline
+\newline
+The above equation is modified as below when you solve a nonhomogenous equation.
+\begin{equation}
+    \mathbf{x} = \mathbf{p} + \mathbf{v_h}
+\end{equation}
+\newline
+The vector $\mathbf{v_h}$ is the solution to the homogenous equation as described previously, while the vector \textbf{p} is the solution to the nonhomogenous equation when %
+the scalar multipliers in the homogeneous solution are zero. Adding \textbf{p} to the solution can be thought of as a translation. This will move the vector of the homogenous %
+soltion in the direction parallel to the vector from \textbf{0} to \textbf{p}. This holds true for a solution set described by a line, as in the scalar multiple of the %
+solution sets we have seen previously. Stated explicitly, the solution set of \textbf{Ax=b} is a line through \textbf{p} parallel to the solution set of \textbf{Ax=0} - %
+generalizable to any consistent soltuon set with any number of free variables.
+\subsection{Applications of Linear Systems}
+Discussed examples in network analysis, economics, and chemistry showasing the utility of solving linear equations. 
+\subsection{Linear Independence}
+Linear Independence comes from there being only the trivial solution to the homogeneous equation. Linear dependence comes from there being a linear combination of terms that %
+solve the homogeneous equation when the weights are not all zero.
+\newline
+\newline
+The columns of a matrix are linearly independent if and only if there is only a trivial solution to the matrix. A set containing only one vector is linearly indpendent if %
+and only if the vector is not the zero vector. This is because the zero vector would have infinitely many solutions as multiplying any scalar with the zero vector solves the %
+homogeneous equation. Independence between two vectors is then shown by equating them to zero, solving for one in terms of the other, and deciphering if the relationship %
+is possible. Independence is achieved if the only possible solution is using zero as the scalar multiple. This translates into the easy theorem that a set of two vectors is %
+linearly dependent if at least one of the vectors is a multiple of the other. The set is independent if and only if neither are a multiple of the other. A set of two or more %
+vectors is linearly dependent if and only if at least one of the vectors in S is a linear combination of the others. If a set is dependent, and the initial vector in the set %
+is not the zero vector, then one of the other vectors is a linear combination of the terms before it. Another important theorem is that if the number of terms in a set is %
+greater than the dimensionality of the set, then the set is linearly dependent. Lastly, if a set contains the zero vector, then it is linearly dependent. 
+\newline
+\subsection{Introduction to Linear Transformations}
+A useful interpretation of the matrix equation previously defined is that \textbf{A} is a transformation applied to \textbf{x} to acheive \textbf{b}. What this transformation %
+does is take the domain of \textbf{x} and \textbf{x} itself, and assigns a vector \textbf{T(x)} (\textbf{Ax}) to each vector \textbf{x} in the new domain (codomain) %
+with added dimensionality.%
+This is often referred to as the image of \textbf{x} under the action \textbf{T}. The set of all the new vectors is referred to as the range. The domain is of dimensionality n %
+corresponding to the number of columns of A, while the codomain is of dimensionality m corresponding to the number of entries per column in A. 
+\newline
+\newline
+Projections from the 3D to the 2D world are straighforward, as all you need to do is apply an identity matrix that has the dimensions you are no longer interested in replaced %
+with zeros. Shear transformations can be achieved by taking the identity matrix and adding constants in the row of the dimension you wish to translate. Contractions can occur %
+when the transformation matrix is between 0 and 1, while dilations occur when the tranformation is greater than 1. Rotations can be made by applying constants opposite %
+where the identity matrix would be. 
+\newline
+\subsection{The matrix of a linear transformation}
+Every linear transformation between two dimensions is a matrix transformation that can be completely realized when using the identity matrix to determine the attributes of the %
+transformations. If it is a linear transformation, then there exists a unique matrix such that the trasformation of \textbf{x} is realized by multiplying \textbf{x} by this %
+matrix. This matrix is described as below using $\mathbf{e_j}$ to describe the corresponding jth identity matrix column. 
+\begin{equation}
+    A = T(e) = \begin{bmatrix}
+        T(e_1) & T(e_2) & \dots & T(e_j)
+    \end{bmatrix}
+\end{equation}
+Rotations can be understood by how they are interpretted on a graph. Rotation counterclockwise would then take each portion of the identity matrix and translate these into the %
+corresponding trigonemtric variations. Starting with Page 74 in the textbook, there are numerous examples of linear transformations and the corresponding matrices that will %
+yield those results. Mapping from the domain into the codomain requires that b in the codomain is the image of at least one x in the domain (existence). A mapping is one-to-one %
+if there is at most one x (or none) where b is the image of it (uniqueness). Furthermore, the linear transformation is one-to-one if and only if the only solution is the %
+trivial one or the columns are linearly independent. The linear transformation maps from one dimensionality to another if and only if the columns of it span the %
+dimensionality of the new space. This explains why mapping from 3D to 2D is not a true "map" since there are not enough pivot positions remaining to have a consistent matrix. 
+\newline
+\newline
+\subsection{Linear Models in Business, Science, and Engineering}
+Discussed applications of linear models to various fields and showing the utility of the material. 
+
+\end{document}

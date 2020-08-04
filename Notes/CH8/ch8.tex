@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, bm, amssymb}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,bindingoffset=0.2in,left=1in,right=1in,top=1in,bottom=1in,footskip=.25in]{geometry}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+\begin{document}
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\title{Notes for ECE269 - Linear Algebra \\
+\large Chapter 6}
+\author{Sam Cowin}
+\maketitle
+
+\section{Linear Equations in Linear Algebra}
+\section{Matrix Algebra}
+\section{Determinants}
+\section{Vector Spaces}
+\section{Eigenvalues and Eigenvectors}
+\section{Orthoginality and Least Squares}
+\section{Symmetric Matrices and Quadratic Forms}
+\section{The Geometry of Vector Spaces}
+The purpose of this chapter is to discuss dimensionality, and how regular polyhedrons can be used in order to explain higher dimensionality. Extensions of these concepts to linear 
+programming, computer graphics, and other topics will follow once the foundation of concepts is laid out. 
+\subsection{Affine Combinations}
+An affine combination is a specific kind of linear combination of vectors in which the weights of the linear combination all sum to 1. The set of all of these points is the affine span 
+or the affine hull. Substituting the coefficients for 1-t substitutions allows you to write pairs of vectors as an equation for a line based on t, or as the $v_1$ and $v_2$ coefficients 
+for 1-t and t. The constant of the line is the first vector and the slope of the line is the difference between the second vector and the first vector. A vector point is an affine 
+combination of the set of vectors if and only if this point minus the first of the set of vectors is a linear combination of the translated points of all the vectors minus the first vector 
+from the set. The selected vector does not need to be the first as long as the same vector is used throughout the translation. To solve such a problem, compute all of the translated 
+points including from the vector point and row reduce the matrix to determine if an affine combination is possible. 
+\newline
+\newline
+To reiterate, to find the basis for a given vector from a set of vectors, row reducing the original vectors will do this. This will also yield the coefficients to be checked to see if there 
+is an affine combination. A set is only affine if and only if the set is equal to the affine of the set. A flat is a translate of a subspace and two flats are parallel if they can be translated 
+to one another. The dimension of a set S is the dimension of the smallest flat containing the set S. Lines translate to a flat that is 1D while hyperplanes are n-1 dimensional for a 
+given subspace of n dimensionality. A nonempty set S is affine if and only if it is a flat. 
+\newline
+\newline
+The standard homogeneous form of vector v is the column vector of v concatenated with 1. A vector y is a linear combination of vectors with coefficients adding to 1 if and only if that 
+vector concatenated with 1 is equal to the linear combination of the same coefficients with the homogeneous representatives of the linear combination of vectors. 
+\subsection{Affine Independence}
+If a set of vectors is affinely dependent then it is automatically linearly dependent. Affine dependence means there are coefficients for the set of vectors in which the sum of all of the 
+coefficients and the vector/coefficient pairs is zero. The rules for affine dependence are similar to linear dependence and are outlined in the text. The geometrical equivalence of 
+being affinely independent is not being in the affine hull. If the difference of the rest of the vectors in a set from one vector is not a linear combination of the others than it 
+is an independent set. Row reduction by not having enough pivot columns can also tell the dependence relationship. The coefficients needed to describe another point in an affine set are 
+referred to as the Affine or Baycentric Coordinates. Reducing the homogeneous matrix of the affine set with ones added on the point in the affine set provides the coordinates. 
+The shapes formed by the vertices of the vector points from the affine set are proportional to the Baycentric Coordinates. The proportionality can be used to determine values at 
+that point such as the color skew based on the colors at the vertices. This practice can extend to ray tracing as well. The equation for the ray set equal to the affine combination 
+for the plane yields the intersection coefficients and time, and this used with the ray equation determines the intersection point. If all of the coefficients are positive, then it is 
+inside the image. 
+\subsection{Convex Combinations}
+\subsection{Hyperplanes}
+\subsection{Polytopes}
+\subsection{Curves and Surfaces}
+
+\end{document}
