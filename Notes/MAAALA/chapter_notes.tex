@@ -56,6 +56,21 @@ A helpful observation is that for a given set of vectors S from a subspace V, S 
 multiplied with the column matrix from S, you obtain the vector in the subspace. This is deduced from the rank (number of pivots, pivotal columns, or nonzero rows) and 
 the fact that for A$\mathbf{x=b}$ to be consistent, the rank of A needs to equal the rank of A|b. 
 \subsection{Four Fundamental Subspaces}
+The four fundamental subspaces associated with $\mathbf{A}_{mxn}$ are:
+\begin{itemize}
+    \item The range or column space: $R(\mathbf{A})=\{\mathbf{Ax}\}|\mathbf{x}\in R^n, \subseteq R^m$
+    \newline
+    The spanning set for a range space are the basic columns from the pivot positions of the original matrix
+    \item The row space or left-hand range: $R(\mathbf{A^T})=\{\mathbf{A^Ty}\}|\mathbf{y}\in R^m, \subseteq R^n$
+    \newline
+    The spanning set for a row space are the non-zero rows of the reduced echelon form of the original matrix
+    \item The nullspace: $N(\mathbf{A})=\{\mathbf{x}|\mathbf{Ax=0}\}, \subseteq R^n$
+    \newline
+    The spanning set for a nullspace is the general solution to the form \textbf{Ax=b} in terms of the free variable vectors or of the trivial solution (rank is equal to n)
+    \item The left-hand nullspace: $N(\mathbf{A^T})=\{\mathbf{y}|\mathbf{A^Ty=0}\}, \subseteq R^m$
+    The spanning set for a left-hand nullspace are the last m-rank rows of the singular matrix P resulting in \textbf{PA=U} with U being in row echelon form (A|I to U|P)
+\end{itemize}
+The same rows and columns between two same shaped matrices yield the same nullspaces/left-hand nullspaces. 
 \subsection{Linear Independence}
 \subsection{Basis and Dimension}
 \subsection{More about Rank}
