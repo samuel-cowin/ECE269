@@ -72,8 +72,103 @@ The four fundamental subspaces associated with $\mathbf{A}_{mxn}$ are:
 \end{itemize}
 The same rows and columns between two same shaped matrices yield the same nullspaces/left-hand nullspaces. 
 \subsection{Linear Independence}
+A set of vectors of dimension n is linearly independent whenever the only solution to the linear combination of these vectors with scalar multipliers is the trivial solution to the 
+homogeneous equations of these linear comninatorial terms equal to zero. If one of these scalars is not zero, the set is linearly dependent, or, said alternatively, the vectors 
+within the set have dependency relationships. One caveat is that the empty set is linearly independent. Isolated vectors do not have this concept, only sets do. 
+\newline
+\newline
+If \textbf{A} is a \textit{m x n} matrix, the columns of \textbf{A} form a linearly independent set if the nullspace is equal to the zero set, or the rank is equal to the number of columns. 
+Similarly, this holds for the rows of this matrix, if the nullspace of the rows is the zero set or the rank of the matrix is equal to the number of rows. Nonsingular (invertible) follows 
+from the fact that the columns or rows of the square matrix are a linearly independent set. 
+\newline
+\newline
+For the rank of a matrix equal to r, a maximal independent set of the rows or columns from this matrix contains exactly r rows or columns respectively. The basic columns of the matrix 
+form one such example of a maximal independent subset of the columns of the matrix. Maximal independent set refers to the greatest number of columns (rows) of a matrix that is not 
+independent to form an independent set. 
+\newline
+\newline
+For a nonempty set of vectors of dimension n in a vector space, the following statements hold:
+\begin{itemize}
+    \item If there is a linearly dependent subset in this set, then the set is linearly dependent
+    \item If the set is linearly independent, then every subset of the set is also linearly independent
+    \item If the set is linearly independent and there is another vector in this vector space, the extension set of the set combined with this other vector is a linearly independent set 
+    if and only if the vector is not in the span of the set. 
+    \item If the set if in the m dimensional space and n > m, then the set is linearly dependent
+\end{itemize}
 \subsection{Basis and Dimension}
+A linearly independent spanning set of a vector space is the basis for that vector space. Unit vectors form the standard basis for a given field. The empty set is considered the basis 
+for the zero set. There are finite and infinite spaces constituting in finite and infinite basis sets. If there is a vector space of size m, and a set of size n in this vector space, 
+then saying this set is a basis of the vector space is equivalent to saying it is a minimally spanning set of the vector space as well as a maximal linearly independent subset of the 
+vector space. The corresponing number of a vecors in any of the just decribed sets is the dimension of that vector space. If there are two vector spaces and the first is contained in the 
+second, then the dimension of the first is less than or equal to the second, and if equal, they are the same vector space. 
+\newline
+\newline
+For an \textit{m x n} matrix \textbf{A} of real numbers such that the rank is r, the following statements hold:
+\begin{itemize}
+    \item dimension of the column space of this matrix is r
+    \item dimension of the nullspace of this matrix is n-r
+    \item dimension of the row space of this matrix is r
+    \item dimension of the left-hand nullspace of this matrix is m-r
+    \item The basic columns of A form a basis of the column space
+    \item The nonzero rows of the reduced echelon form of the matrix forms a basis for the row space of the matrix
+    \item The set forming the general solution to the homogeneous equation of the matrix forms a basis for the nullspace
+    \item The last m-r rows of P from computing (A|I to U|P) form a basis of the left-hand nullspace
+    \item The dimension of the column space plus the dimension of the nullspace is equal to n (rank plus nullity)
+\end{itemize}
+To extend a linearly independent subset of a vector space with r dimension to form a n dimensional basis (up to n dimension), adding the unit vectors up to the n dimension to the set and 
+reducing the new matrix yields the final basis vectors. 
+\newline
+\newline
+For a graph G containing m nodes and directed (or assign direction arbitrarily), the resulting incidence matrix proves the graph is connected if and only if the rank of the incidence matrix 
+is equal to m-1. If X and Y are subspaces of a vector space V, the dimension of the sum of X and Y is equal to the dimension of X plus the dimension of Y minus the dimension of the 
+intersection of X and Y. 
 \subsection{More about Rank}
+The rank of a product of \textbf{A} (\textit{m x n} matrix) and \textbf{B} (\textit{n x p} matrix) can be defined as follows:
+$$
+rank(\mathbf{AB})=rank(\mathbf{B})-dimN(\mathbf{A})\cap R(\textbf{B})
+$$
+For these same matrices, the basis for the intersection of the nullspace and the range respectively of them can be constructed by:
+\begin{itemize}
+    \item Finding a basis in r dimensions for the range of \textbf{B}
+    \item Setting an \textit{n x r} matrix \textbf{X} equal to the column matrix of that basis
+    \item Finding a basis in s dimensions for the nullspace of the product of \textbf{AX}
+    \item That basis with each column vector component multiplied with \textbf{X} is the basis of the intersection
+\end{itemize}
+The bounds of the rank of the product of these two such matrices are:
+\begin{itemize}
+    \item rank(\textbf{AB})$\leq$min{rank(\textbf{A}), rank(\textbf{B})}
+    \item rank(\textbf{A})+rank(\textbf{B})-n$\leq$rank(\textbf{AB})
+\end{itemize}
+For the matrix \textbf{A} in the field of reals of size \textit{m x n} the following are true:
+\begin{itemize}
+    \item rank($\mathbf{A^TA}$)=rank(\textbf{A})=rank($AA^T$)
+    \item The range and nullspace over the values above are all equal as well
+    \item For the complex space, the complex transpose * is used instead of T
+\end{itemize}
+For an \textit{m x n} system \textbf{Ax=b}, the associated normal equations is defined to be the \textit{n x n} system $\mathbf{A^TAx=A^Tb}$. This set of normal equations is always consistent 
+even when the original system is not. When the original system is consistent, its solution agrees with that found by the normal equations. The normal equations have a unique solution if and 
+only if the rank of the matrix \textbf{A} is n - the solution that follows is $\mathbf{x=(A^TA)^-1A^Tb}$ (from the previous equation). When the original system is consistent and has a unique 
+solution, it will match this solution from the normal equations, and is given by the same formula. Although these properties are highly desirable, the use of normal equations in computation 
+is limited as small perturbations are exagerated and cause issues for the new form due to the transpose multiplication. 
+\newline
+\newline
+The rank of a matrix is precisely the order of a maximal square nonsingular submatrix within that matrix. This also provides the proof of existence for such a matrix of size rank x rank. If 
+there are small perturbations added to a matrix, the rank of the new matrix formed with the chanes and the old unaltered matrix are the same. The degree to which a change will not result in 
+changes to the rank will be addressed in future chapters within this text. 
+\newline
+\newline
+A summary of rank is given by providing the following true statements for a matrix \textbf{A} of size \textit{m x n} (substituting the complex transpose if using the complex number field):
+\begin{itemize}
+    \item The number of nonzero rows in any echelon form row equivalent to \textbf{A} is equal to the rank of that matrix
+    \item The number of pivots of the matrix from reducing the matrix to echelon form with row operations is equal to the rank of that matrix
+    \item The number of basic columns in the matrix or any row equivalent matrix is equal to the rank of the matrix
+    \item The number of independent columns/rows in the matrix is equivalent to the rank of the matrix
+    \item The dimension of the columnspace/rowspace of the matrix is equal to the rank of the matrix
+    \item The number of columns/rows minus the dimension of the nullspace/left-hand nullspace of the matrix is equal to the rank of the matrix
+    \item The rank of the matrix is equal to the size of the largest nonsingular submatrix within A
+\end{itemize}
+
+
 \subsection{Classical Least-Squares}
 \subsection{Linear Transformations}
 \subsection{Change of Basis and Similarity}
